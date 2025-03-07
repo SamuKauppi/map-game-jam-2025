@@ -7,7 +7,6 @@ public class Route : MonoBehaviour
     public Transform StartPoint {  get { return startingPoint; } }
     public Transform EndPoint { get { return endPoint; } }
 
-
     [SerializeField] private RouteType type;
     [SerializeField] private HazardType hazardType;
     [SerializeField] private SpriteRenderer spriteRend;
@@ -17,16 +16,21 @@ public class Route : MonoBehaviour
 
     private void Start()
     {
-        spriteRend.color = new Color(spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, 0.5f);
+        ChangeAlpha(0.5f);
     }
 
     private void OnMouseEnter()
     {
-        spriteRend.color = new Color(spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, 1f);
+        ChangeAlpha(1f);
     }
 
     private void OnMouseExit()
     {
-        spriteRend.color = new Color(spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, 0.5f);
+        ChangeAlpha(0.5f);
+    }
+
+    public void ChangeAlpha(float a)
+    {
+        spriteRend.color = new Color(spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, a);
     }
 }
