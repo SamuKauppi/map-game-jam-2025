@@ -2,33 +2,46 @@ using UnityEngine;
 
 public class RouteManager : MonoBehaviour
 {
-    [SerializeField] private Route[] routes;
-    [SerializeField] private Transform currentPoint;
+    public static RouteManager Instance { get; private set; }
 
-    [SerializeField] private Transform[] testPositions;
+    public RoutePoint CurrentPoint { get { return currentPoint; } }
+
+    [SerializeField] private RoutePoint[] routePoints;
+    [SerializeField] private Route[] routes;
+
+    private RoutePoint currentPoint;
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     private void Start()
     {
-        currentPoint = testPositions[Random.Range(0, testPositions.Length)];
- 
+        currentPoint = routePoints[0];
         ShowCurrentRoads();
-    }
-
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            currentPoint = testPositions[Random.Range(0, testPositions.Length)];
-            ShowCurrentRoads();
-        }
     }
 
     public void ShowCurrentRoads()
     {
         foreach (Route route in routes)
         {
-            route.gameObject.SetActive(currentPoint.position == route.StartPoint.position);
+           route.gameObject.SetActive(route.HasTargetPoint(currentPoint));
         }
+
+        foreach (RoutePoint point in routePoints)
+        {
+            point.gameObject.SetActive(point == currentPoint);
+        }
+    }
+
+    public void MoveThroughRoute(RoutePoint targetPoint)
+    {
+        currentPoint = targetPoint;
+        // Move Player
+        ShowCurrentRoads();
     }
 }

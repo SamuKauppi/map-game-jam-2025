@@ -4,15 +4,12 @@ public class Route : MonoBehaviour
 {
     // Getters
     public RouteType RouteType { get { return type; } }
-    public Transform StartPoint {  get { return startingPoint; } }
-    public Transform EndPoint { get { return endPoint; } }
 
     [SerializeField] private RouteType type;
     [SerializeField] private HazardType hazardType;
     [SerializeField] private SpriteRenderer spriteRend;
 
-    [SerializeField] private Transform startingPoint;
-    [SerializeField] private Transform endPoint;
+    [SerializeField] private RoutePoint[] targetPoints;
 
     private void Start()
     {
@@ -29,8 +26,34 @@ public class Route : MonoBehaviour
         ChangeAlpha(0.5f);
     }
 
+    private void OnMouseDown()
+    {
+        RoutePoint point = null;
+        foreach (RoutePoint p in targetPoints)
+        {
+            if (RouteManager.Instance.CurrentPoint != p)
+            {
+                point = p;
+                break;
+            }
+        }
+
+        if (point != null)
+            RouteManager.Instance.MoveThroughRoute(point);
+    }
+
     public void ChangeAlpha(float a)
     {
         spriteRend.color = new Color(spriteRend.color.r, spriteRend.color.g, spriteRend.color.b, a);
+    }
+
+    public bool HasTargetPoint(RoutePoint currentPoint)
+    {
+        foreach (RoutePoint p in targetPoints)
+        {
+            if (p == currentPoint) return true;
+        }
+
+        return false;
     }
 }
