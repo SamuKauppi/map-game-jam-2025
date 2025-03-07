@@ -11,7 +11,6 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Text horseStaminaText;
     [SerializeField] private Text PlayerLocationText;
 
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,21 +26,21 @@ public class UiManager : MonoBehaviour
 
     public void UpdateHealthUI(int health)
     {
-        healthText.text = "Health: " + health;
+        //healthText.text = "Health: " + health;
     }
 
     public void UpdateTimeUI(int time)
     {
-        timeText.text = "Time: " + time;
+        //timeText.text = "Time: " + time;
     }
 
     public void UpdateHorseStaminaUI(int stamina)
     {
-        horseStaminaText.text = "HorseStamina: " + stamina;
+        //horseStaminaText.text = "HorseStamina: " + stamina;
     }
 
     public void UpdatePlayerLocationUI(Vector2 playerLocation)
     {
-        PlayerLocationText.text = "Location: (" + playerLocation.x + ", " + playerLocation.y + ")";
+        //PlayerLocationText.text = "Location: (" + playerLocation.x + ", " + playerLocation.y + ")";
     }
 }

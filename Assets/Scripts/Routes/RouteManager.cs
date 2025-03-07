@@ -10,6 +10,7 @@ public class RouteManager : MonoBehaviour
     [SerializeField] private Route[] routes;
 
     private RoutePoint currentPoint;
+    private Route currentRoute;
 
     private void Awake()
     {
@@ -22,6 +23,8 @@ public class RouteManager : MonoBehaviour
     private void Start()
     {
         currentPoint = routePoints[0];
+
+        PlayerStats.Instance.SetPlayerPos(currentPoint.transform.position);
         ShowCurrentRoads();
     }
 
@@ -29,7 +32,7 @@ public class RouteManager : MonoBehaviour
     {
         foreach (Route route in routes)
         {
-           route.gameObject.SetActive(route.HasTargetPoint(currentPoint));
+            route.gameObject.SetActive(route.HasTargetPoint(currentPoint));
         }
 
         foreach (RoutePoint point in routePoints)
@@ -38,10 +41,35 @@ public class RouteManager : MonoBehaviour
         }
     }
 
-    public void MoveThroughRoute(RoutePoint targetPoint)
+    public void MoveThroughRoute(RoutePoint targetPoint, Route targetRoute, Transform[] movePath, float moveTime)
     {
+        // Update currentPoint
         currentPoint = targetPoint;
+        currentRoute = targetRoute;
+
         // Move Player
+        PlayerStats.Instance.PlayerMove(movePath, moveTime);
+
+        // Show only current route
+        foreach (Route route in routes)
+        {
+            if (route == currentRoute)
+            {
+                route.gameObject.SetActive(true);
+                route.IsClickable = false;
+                route.ChangeAlpha(1f);
+            }
+            else
+            {
+                route.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void CompletedMovement()
+    {
+        currentRoute.IsClickable = true;
+        currentRoute.ChangeAlpha(0.5f);
         ShowCurrentRoads();
     }
 }

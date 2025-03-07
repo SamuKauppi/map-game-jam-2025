@@ -4,12 +4,17 @@ public class Route : MonoBehaviour
 {
     // Getters
     public RouteType RouteType { get { return type; } }
+    public bool IsClickable { get; set; } = true;
 
     [SerializeField] private RouteType type;
     [SerializeField] private HazardType hazardType;
     [SerializeField] private SpriteRenderer spriteRend;
 
-    [SerializeField] private RoutePoint[] targetPoints;
+    [SerializeField] private RoutePoint startPoint;
+    [SerializeField] private RoutePoint endPoint;
+
+    [SerializeField] private Transform[] playerMovePath;
+    [SerializeField] private float moveTime = 1f;
 
     private void Start()
     {
@@ -18,29 +23,50 @@ public class Route : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (!IsClickable) return;
+
         ChangeAlpha(1f);
     }
 
     private void OnMouseExit()
     {
+        if (!IsClickable) return;
+
         ChangeAlpha(0.5f);
     }
 
     private void OnMouseDown()
     {
-        RoutePoint point = null;
-        foreach (RoutePoint p in targetPoints)
+        if (!IsClickable) return;
+
+        Transform[] movePath = new Transform[playerMovePath.Length];
+        RoutePoint targetPoint;
+
+        if (RouteManager.Instance.CurrentPoint != startPoint)
         {
-            if (RouteManager.Instance.CurrentPoint != p)
+            targetPoint = startPoint;
+
+            // Copy in reverse order
+            for (int i = playerMovePath.Length - 1; i >= 0; i--)
             {
-                point = p;
-                break;
+                movePath[playerMovePath.Length - 1 - i] = playerMovePath[i];
+            }
+        }
+        else
+        {
+            targetPoint = endPoint;
+
+            // Copy in original order
+            for (int i = 0; i < playerMovePath.Length; i++)
+            {
+                movePath[i] = playerMovePath[i];
             }
         }
 
-        if (point != null)
-            RouteManager.Instance.MoveThroughRoute(point);
+        if (targetPoint != null)
+            RouteManager.Instance.MoveThroughRoute(targetPoint, this, movePath, moveTime);
     }
+
 
     public void ChangeAlpha(float a)
     {
@@ -49,11 +75,7 @@ public class Route : MonoBehaviour
 
     public bool HasTargetPoint(RoutePoint currentPoint)
     {
-        foreach (RoutePoint p in targetPoints)
-        {
-            if (p == currentPoint) return true;
-        }
-
+        if (startPoint == currentPoint || endPoint == currentPoint) return true;
         return false;
     }
 }
