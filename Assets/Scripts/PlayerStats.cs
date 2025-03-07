@@ -30,22 +30,26 @@ public class PlayerStats : MonoBehaviour
 
     private void DoDamage(int damage)
     {
-        health += damage;
+        health -= damage;
+        UiManager.Instance.UpdateHealthUI(health);
     }
 
-    private void PlayerMove()
+    private void PlayerMove(Vector2 newLocation)
     {
-
+        PlayerLocation = newLocation;
+        UiManager.Instance.UpdatePlayerLocationUI(PlayerLocation);
     }
 
     private void TakeTime(int TakenTime)
     {
-        time += TakenTime;
+        time -= TakenTime;
+        UiManager.Instance.UpdateTimeUI(time);
     }
 
     private void HorseTired(int HorseStaminaMinus)
     {
-        horseStamina += HorseStaminaMinus;
+        horseStamina -= HorseStaminaMinus;
+        UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
     }
 
 }
