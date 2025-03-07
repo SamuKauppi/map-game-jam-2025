@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 
 
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,9 +28,9 @@ public class PlayerStats : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void DoDamage()
+    private void DoDamage(int damage)
     {
-
+        health += damage;
     }
 
     private void PlayerMove()
@@ -37,5 +38,14 @@ public class PlayerStats : MonoBehaviour
 
     }
 
+    private void TakeTime(int TakenTime)
+    {
+        time += TakenTime;
+    }
+
+    private void HorseTired(int HorseStaminaMinus)
+    {
+        horseStamina += HorseStaminaMinus;
+    }
 
 }
