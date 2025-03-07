@@ -7,6 +7,14 @@ public class RouteManager : MonoBehaviour
 
     [SerializeField] private Transform[] testPositions;
 
+    private void Start()
+    {
+        currentPoint = testPositions[Random.Range(0, testPositions.Length)];
+ 
+        ShowCurrentRoads();
+    }
+
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))
@@ -15,6 +23,7 @@ public class RouteManager : MonoBehaviour
             ShowCurrentRoads();
         }
     }
+
     public void ShowCurrentRoads()
     {
         foreach (Route route in routes)
@@ -22,6 +31,4 @@ public class RouteManager : MonoBehaviour
             route.gameObject.SetActive(currentPoint.position == route.StartPoint.position);
         }
     }
-
-
 }
