@@ -2,5 +2,6 @@
 {
     Road,
     Forrest,
-    Water,
+    Ship,
+    Boat,
 }
