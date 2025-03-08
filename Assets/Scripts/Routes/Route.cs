@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Route : MonoBehaviour
@@ -18,6 +19,11 @@ public class Route : MonoBehaviour
 
     private void Start()
     {
+        Transform[] movePath = new Transform[playerMovePath.Length + 2];
+        movePath[0] = startPoint.transform;
+        movePath.AddRange(playerMovePath);
+        movePath[^1] = endPoint.transform;
+
         ChangeAlpha(0.5f);
     }
 
