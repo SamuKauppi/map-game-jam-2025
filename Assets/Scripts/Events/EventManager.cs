@@ -71,10 +71,10 @@ public class EventManager : MonoBehaviour
         if (roll > eventChance)
             return false;
 
-        if (rType == RouteType.Road || rType == RouteType.Offroad && landEvents.Length != 0)
+        if ((rType == RouteType.Road || rType == RouteType.Offroad) && landEvents.Length != 0)
             currentEvent = landEvents[roll % landEvents.Length];
 
-        else if (rType == RouteType.Boat || rType == RouteType.Ship && waterEvents.Length != 0)
+        else if ((rType == RouteType.Boat || rType == RouteType.Ship) && waterEvents.Length != 0)
             currentEvent = waterEvents[roll % waterEvents.Length];
 
 
