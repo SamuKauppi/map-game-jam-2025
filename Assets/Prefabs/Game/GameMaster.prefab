@@ -170,6 +170,7 @@ MonoBehaviour:
   time: 10
   horseStamina: 10
   money: 100
+  moveSpeed: 1
 --- !u!1 &8510173467408092119
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +413,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5328058787308515081}
     m_Modifications:
+    - target: {fileID: 953743822002057547, guid: a548e47b92a9cbc4c96a9cfebc88b74c, type: 3}
+      propertyPath: x_bounds.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 953743822002057547, guid: a548e47b92a9cbc4c96a9cfebc88b74c, type: 3}
+      propertyPath: x_bounds.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 953743822002057547, guid: a548e47b92a9cbc4c96a9cfebc88b74c, type: 3}
+      propertyPath: y_bounds.x
+      value: -28
+      objectReference: {fileID: 0}
+    - target: {fileID: 953743822002057547, guid: a548e47b92a9cbc4c96a9cfebc88b74c, type: 3}
+      propertyPath: y_bounds.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 2724410076100822012, guid: a548e47b92a9cbc4c96a9cfebc88b74c, type: 3}
       propertyPath: m_Name
       value: CameraController

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DragZoomBackground : MonoBehaviour
 {
+    [SerializeField] private Vector2 x_bounds;
+    [SerializeField] private Vector2 y_bounds;
     public Camera cam; // Reference to the main camera
     public float minZoom = 2f;
     public float maxZoom = 10f;
@@ -35,6 +37,12 @@ public class DragZoomBackground : MonoBehaviour
         {
             Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
             cam.transform.position += difference * dragSpeed;
+
+            Vector3 clampedPos = cam.transform.position;
+            clampedPos.x = Mathf.Clamp(clampedPos.x, x_bounds.x, x_bounds.y);
+            clampedPos.y = Mathf.Clamp(clampedPos.y, y_bounds.x, y_bounds.y);
+            // Preserve the original z position
+            cam.transform.position = clampedPos;
         }
     }
 
