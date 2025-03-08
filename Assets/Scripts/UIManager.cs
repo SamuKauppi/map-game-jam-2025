@@ -12,6 +12,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private TMP_Text horseStaminaText;
     [SerializeField] private TMP_Text PlayerLocationText;
     [SerializeField] private TMP_Text moneyText;
+    [SerializeField] private TMP_Text weatherText;
 
     private void Awake()
     {
@@ -30,14 +31,18 @@ public class UiManager : MonoBehaviour
         healthText.text = "Health: " + health;
     }
 
+    public void UpdateHorseStaminaUI(int stamina)
+    {
+        horseStaminaText.text = "Stamina: " + stamina;
+    }
+    public void UpdateMoneyUI(int money)
+    {
+        horseStaminaText.text = "Money: " + money;
+    }
+
     public void UpdateTimeUI(int time)
     {
         timeText.text = "Time: " + time;
-    }
-
-    public void UpdateHorseStaminaUI(int stamina)
-    {
-        horseStaminaText.text = "HorseStamina: " + stamina;
     }
 
     public void UpdatePlayerLocationUI(Vector2 playerLocation)
