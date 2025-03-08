@@ -8,7 +8,6 @@ public class UiManager : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private TMP_Text timeText;
     [SerializeField] private TMP_Text horseStaminaText;
-    [SerializeField] private TMP_Text PlayerLocationText;
     [SerializeField] private TMP_Text moneyText;
     [SerializeField] private TMP_Text weatherText;
 
@@ -31,6 +30,11 @@ public class UiManager : MonoBehaviour
     private IEnumerator ReduceOverTime(TMP_Text targetText, int startAmount, int endAmount, string text = "")
     {
         float t = 0f;
+        if (startAmount == 0)
+        {
+            startAmount = endAmount;
+        }
+
         while (t < 3f)
         {
             targetText.text = Mathf.RoundToInt(Mathf.Lerp(startAmount, endAmount, t / 3f)).ToString() + text;
@@ -44,11 +48,7 @@ public class UiManager : MonoBehaviour
         if (health < 0)
             health = 0;
 
-        if (hp > 0)
-        {
-            StartCoroutine(ReduceOverTime(healthText, hp, health));
-        }
-
+        StartCoroutine(ReduceOverTime(healthText, hp, health));
         hp = health;
     }
 
@@ -57,11 +57,8 @@ public class UiManager : MonoBehaviour
         if (stamina < 0)
             stamina = 0;
 
-        if (stm > 0)
-        {
-            StartCoroutine(ReduceOverTime(horseStaminaText, stm, stamina));
-        }
 
+        StartCoroutine(ReduceOverTime(horseStaminaText, stm, stamina));
         stm = stamina;
     }
 
@@ -69,11 +66,7 @@ public class UiManager : MonoBehaviour
     {
         if (money < 0) money = 0;
 
-        if (this.money > 0)
-        {
-            StartCoroutine(ReduceOverTime(moneyText, this.money, money));
-        }
-
+        StartCoroutine(ReduceOverTime(moneyText, this.money, money));
         this.money = money;
     }
 
@@ -81,11 +74,7 @@ public class UiManager : MonoBehaviour
     {
         if (time < 0) time = 0;
 
-        if (this.time > 0)
-        {
-            StartCoroutine(ReduceOverTime(timeText, this.time, time, " h"));
-        }
-
+        StartCoroutine(ReduceOverTime(timeText, this.time, time, " h"));
         this.time = time;
     }
     public void UpdateWeatherUI(bool weather)
