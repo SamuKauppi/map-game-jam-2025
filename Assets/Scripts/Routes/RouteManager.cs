@@ -48,7 +48,7 @@ public class RouteManager : MonoBehaviour
         currentRoute = targetRoute;
 
         // Move Player
-        PlayerStats.Instance.PlayerMove(movePath);
+        PlayerStats.Instance.PlayerMove(movePath, targetRoute.RouteType);
 
         // Show only current route
         foreach (Route route in routes)
