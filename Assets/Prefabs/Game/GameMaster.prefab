@@ -231,6 +231,112 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].amount1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].amount2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].amount1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].amount2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].eventText
+      value: "A horned giant of the forest rushes through the trees, driven mad by
+        hunt. As it runs towards you, you can\u2019t but marvel at its size: like
+        some forgotten god of olden times, strong like ten men and crowned by antlers.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].eventText
+      value: "A group of blackguards, armed with clubs has blocked the route with
+        a tree. \u201CLookie lookie, it\u2019s mighty fine gentleman, riding a pretty
+        horsie. You got some mail for us?\u201D says a man with smile like a wolf
+        and arms like tree trunks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Txt
+      value: 'Stand your ground!  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Txt
+      value: Run away!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Txt
+      value: "\u201CSurely you\u2019d be more interested in clittering of coin than
+        some pointless tax forms?\u201D  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option2Txt
+      value: "\u201CScoundrels! I am man with a mission! You need pray these papers
+        from death cold clutches of my hands!\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ddff37bc269d1241bf1a68fa6345496, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a821530ef736553468cf7d189cb6622b, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option1EndTxt
+      value: "No beast of land, be it size like insect or behemoth, shall stand in
+        postman\u2019s way. You steady yourself. ready for what\u2019s come. The
+        creature hits you in its hurry and only by grace of God are you saved from
+        being gored by its heady collection of spears. Your hand is not so lucky:
+        bone bursting from the beast\u2019s head rends your flesh and draw blood.
+        As it disappears into forest, you\u2019re left holding your sorry hand and
+        cursing the being. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option2EndTxt
+      value: "Even when brave knights roamed the lands, they knew there were beasts
+        fierce enough that turning your tail and fleeing wasn\u2019t just the wisest
+        option: it was the only one. You feel wind on your back as your steps hurry
+        from the antlered monster. \r\nWhile this wisest of choices saved you from
+        confrontation with the dread bovine, it also got you hopelessly lost. Your
+        legs can carry your surprisingly long and fast. Too bad they only seem to
+        work this superbly while running from your life. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option1EndTxt
+      value: "Render unto bandits what\u2019s bandit\u2019s and unto mailmen what\u2019s
+        mailmen\u2019s. You both go your merry way, your burden lessened greatly
+        from corrupting touch of gold and your new acquaintances with sirng on their
+        step on way to nearest tavern. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option2EndTxt
+      value: "Hell hath no fury like mailman scorned. Clubs are nothing compared
+        to a bag full of letters, heavy as the word of God they contain. Sticks and
+        stones can however still break your bones and while you\u2019re finished
+        with the bandits, you\u2019re bloodied, bruised and you\u2019re not physician
+        but you reckon your fingers should not bend that way. "
+      objectReference: {fileID: 0}
     - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -355,6 +461,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: RouteManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4269828794959469349, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
+      propertyPath: endPoint
+      value: 
+      objectReference: {fileID: 6827630267536329668}
+    - target: {fileID: 5646751017799817501, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
+      propertyPath: routes.Array.size
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646751017799817501, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
+      propertyPath: routes.Array.data[64]
+      value: 
+      objectReference: {fileID: 3285821396887806527}
     - target: {fileID: 5860023542783909435, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -396,15 +514,38 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8220429407034472681, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
+--- !u!114 &3285821396887806527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3868931820526639357, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
+  m_PrefabInstance: {fileID: 1740819208323873474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11571431471b1754a90c2a52c5a79e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5294647140044088569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5860023542783909435, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
   m_PrefabInstance: {fileID: 1740819208323873474}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6827630267536329668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5109400113296929030, guid: c799c8d1f671026478d8d975a56a7b66, type: 3}
+  m_PrefabInstance: {fileID: 1740819208323873474}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30483878fafad84988e103a2637bd84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4097566158323701356
 PrefabInstance:
   m_ObjectHideFlags: 0

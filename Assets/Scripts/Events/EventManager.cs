@@ -6,7 +6,8 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
 
-    [SerializeField] private Event[] events;
+    [SerializeField] private Event[] landEvents;
+    [SerializeField] private Event[] waterEvents;
 
     [SerializeField] private GameObject popUpWindow;
     [SerializeField] private Image popup_img;
@@ -36,10 +37,7 @@ public class EventManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            TriggerEvent(EventType.Moose);
-        }
+        
     }
 
     private void HandleStatChange(StatType type, int amount)
@@ -63,21 +61,25 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void TriggerEvent(EventType type)
+    public bool TriggerEvent(RouteType rType)
     {
+        int chance = 20;    // Chance of event happening in percentage.
+        int roll = Random.Range(0, 101);
 
-        foreach (Event e in events)
-        {
-            if (e.type == type)
-            {
-                currentEvent = e;
-                break;
-            }
-        }
+        // Return if the event wont happen.
+        if ( roll > chance)
+            return false;
+
+        if (rType == RouteType.Road || rType == RouteType.Offroad)
+            currentEvent = landEvents[roll % landEvents.Length];
+
+        else
+            currentEvent = waterEvents[roll % waterEvents.Length];
+
 
         if (currentEvent == null)
-            return;
-
+            return false;
+        
         popUpWindow.SetActive(true);
         closeWindow.SetActive(false);
 
@@ -87,6 +89,7 @@ public class EventManager : MonoBehaviour
         choice2_txt.text = currentEvent.option2Txt;
 
         close_img.sprite = currentEvent.eventSprite;
+        return true;
     }
 
     public void CloseEvent(int choice)
