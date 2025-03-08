@@ -123,6 +123,390 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &460398954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460398956}
+  - component: {fileID: 460398955}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &460398955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460398954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b80dc9ac3a9811d4aacaf6d9a63f8450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encounterChance: 0.3
+  directedEncounterChance: 0.5
+  mapRegions:
+  - regionName: Meri
+    directedEncounters: []
+    randomEncounters:
+    - name: Bandit
+      encounterPrefab: {fileID: 0}
+--- !u!4 &460398956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460398954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.296207, y: -13.099764, z: -0.3432401}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &845380098
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2342227167853521252, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_Name
+      value: EventManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].amount1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].amount2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].option2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].amount1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].amount2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].option1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].eventText
+      value: "A horned giant of the forest rushes through the trees, driven mad by
+        hunt. As it runs towards you, you can\u2019t but marvel at its size: like
+        some forgotten god of olden times, strong like ten men and crowned by antlers.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].eventText
+      value: "A group of blackguards, armed with clubs has blocked the route with
+        a tree. \u201CLookie lookie, it\u2019s mighty fine gentleman, riding a pretty
+        horsie. You got some mail for us?\u201D says a man with smile like a wolf
+        and arms like tree trunks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].option1Txt
+      value: 'Stand your ground!  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].option2Txt
+      value: Run away!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].option1Txt
+      value: "\u201CSurely you\u2019d be more interested in clittering of coin than
+        some pointless tax forms?\u201D  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].option2Txt
+      value: "\u201CScoundrels! I am man with a mission! You need pray these papers
+        from death cold clutches of my hands!\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ddff37bc269d1241bf1a68fa6345496, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a821530ef736553468cf7d189cb6622b, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].option1EndTxt
+      value: "No beast of land, be it size like insect or behemoth, shall stand in
+        postman\u2019s way. You steady yourself. ready for what\u2019s come. The
+        creature hits you in its hurry and only by grace of God are you saved from
+        being gored by its heady collection of spears. Your hand is not so lucky:
+        bone bursting from the beast\u2019s head rends your flesh and draw blood.
+        As it disappears into forest, you\u2019re left holding your sorry hand and
+        cursing the being. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[0].option2EndTxt
+      value: "Even when brave knights roamed the lands, they knew there were beasts
+        fierce enough that turning your tail and fleeing wasn\u2019t just the wisest
+        option: it was the only one. You feel wind on your back as your steps hurry
+        from the antlered monster. \r\nWhile this wisest of choices saved you from
+        confrontation with the dread bovine, it also got you hopelessly lost. Your
+        legs can carry your surprisingly long and fast. Too bad they only seem to
+        work this superbly while running from your life. \r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].option1EndTxt
+      value: "Render unto bandits what\u2019s bandit\u2019s and unto mailmen what\u2019s
+        mailmen\u2019s. You both go your merry way, your burden lessened greatly
+        from corrupting touch of gold and your new acquaintances with sirng on their
+        step on way to nearest tavern. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[1].option2EndTxt
+      value: "Hell hath no fury like mailman scorned. Clubs are nothing compared
+        to a bag full of letters, heavy as the word of God they contain. Sticks and
+        stones can however still break your bones and while you\u2019re finished
+        with the bandits, you\u2019re bloodied, bruised and you\u2019re not physician
+        but you reckon your fingers should not bend that way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+--- !u!1 &937553100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937553103}
+  - component: {fileID: 937553102}
+  - component: {fileID: 937553101}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &937553101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937553100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &937553102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937553100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &937553103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937553100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1123453505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123453506}
+  - component: {fileID: 1123453509}
+  - component: {fileID: 1123453508}
+  - component: {fileID: 1123453507}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1123453506
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123453505}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1635706533}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1123453507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123453505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1123453508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123453505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1123453509
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123453505}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1255041836
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +556,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1635706533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1271249254561625554, guid: c5270cbfe7b403444b0728bc5dfa2226, type: 3}
+  m_PrefabInstance: {fileID: 7857334175932942319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1732642689
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +764,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1271249254561625554, guid: c5270cbfe7b403444b0728bc5dfa2226, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1123453506}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5270cbfe7b403444b0728bc5dfa2226, type: 3}
 --- !u!1660057539 &9223372036854775807
@@ -385,3 +777,6 @@ SceneRoots:
   - {fileID: 1732642692}
   - {fileID: 7857334175932942319}
   - {fileID: 1255041838}
+  - {fileID: 937553103}
+  - {fileID: 460398956}
+  - {fileID: 845380098}
