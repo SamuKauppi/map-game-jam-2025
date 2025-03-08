@@ -85,7 +85,6 @@ public class PlayerStats : MonoBehaviour
     public void SetPlayerPos(Vector2 newLocation)
     {
         transform.position = newLocation;
-        UiManager.Instance.UpdatePlayerLocationUI(transform.position);
     }
     public void PlayerMove(Transform[] moveRoute, RouteType type)
     {

@@ -51,9 +51,4 @@ public class UiManager : MonoBehaviour
         else
             weatherText.text = "Clear";
     }
-
-    public void UpdatePlayerLocationUI(Vector2 playerLocation)
-    {
-        //PlayerLocationText.text = "Location: (" + playerLocation.x + ", " + playerLocation.y + ")";
-    }
 }

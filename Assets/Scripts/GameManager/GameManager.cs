@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,9 +6,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private RoutePoint[] endPoints;
     [SerializeField] private Transform questPointer;
+    [SerializeField] private GameObject destinationCanvas;
+    [SerializeField] private RoutePoint turku;
 
     private RoutePoint currentTarget;
 
+    private int progress = 0;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        destinationCanvas.SetActive(false);
         ChooseNewDestination();
     }
 
@@ -35,8 +37,17 @@ public class GameManager : MonoBehaviour
     {
         if (currentTarget == destination)
         {
-            Debug.Log("Game complete");
-            ChooseNewDestination();
+            if (progress == 0)
+            {
+                progress++;
+                destinationCanvas.SetActive(true);
+                currentTarget = turku;
+                questPointer.transform.position = currentTarget.transform.position;
+            }
+            if (progress == 1)
+            {
+                Debug.Log("Game won");
+            }
         }
     }
 }
