@@ -17,10 +17,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float timeDifficultyScale = 0.1f;
     [SerializeField] private float horseisTiredMultipier = 3f;
 
-    //public int Health => health;
-    //public int GameTime => time;
-    //public int HorseStamina => horseStamina;
-    //public int Money => money;
+    public int Health => health;
+    public float GameTime => time;
+    public int HorseStamina => horseStamina;
+    public int Money => money;
 
     private void Awake()
     {
@@ -130,28 +130,34 @@ public class PlayerStats : MonoBehaviour
     public void PlayerMove(Transform[] moveRoute, RouteType type)
     {
         MovingStaminaAndTimeDecrease(moveRoute[0], moveRoute[moveRoute.Length - 1], type);
+        StormManager.Instance.CheckStorm();
         StartCoroutine(MoveBetweenPoints(moveRoute, type));
     }
 
     private void MovingStaminaAndTimeDecrease(Transform startPos, Transform endPos, RouteType type)
     {
         float distance = Vector2.Distance(startPos.position, endPos.position);
-        float time;
+
+        float time = distance * RouteMultiplier(type) * timeDifficultyScale;
+        float stamina = distance * staminaDifficultyScale * RouteMultiplier(type);
+
 
         if (type == RouteType.Road || type == RouteType.Offroad)
         {
-            float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
             HorseTired(Mathf.RoundToInt(stamina));
 
             if (horseStamina == 0)
             {
-                time = distance * RouteMultiplier(type) * timeDifficultyScale * horseisTiredMultipier;
-                TakeTime(time);
-                return;
+                time *= horseisTiredMultipier;
             }
         }
+        if ((type == RouteType.Ship || type == RouteType.Boat) && StormManager.Instance.isStorm)
+        {
+            HorseTired(Mathf.RoundToInt(stamina));
+            time *= StormManager.Instance.stormMultiplier;
+            DoDamage(StormManager.Instance.stormDamage);
+        }
 
-        time = distance * RouteMultiplier(type) * timeDifficultyScale;
         TakeTime(time);
     }
 
