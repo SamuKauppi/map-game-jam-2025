@@ -13,6 +13,11 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private bool weather = false;
 
+    public int Health => health;
+    public int GameTime => time;
+    public int HorseStamina => horseStamina;
+    public int Money => money;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -95,17 +100,29 @@ public class PlayerStats : MonoBehaviour
     {
         time -= TakenTime;
         UiManager.Instance.UpdateTimeUI(time);
+        if (time <= 0)
+        {
+            GameOverManager.Instance.TriggerGameOver();
+        }
     }
 
     public void HorseTired(int HorseStaminaMinus)
     {
         horseStamina -= HorseStaminaMinus;
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
+        if (horseStamina <= 0)
+        {
+            GameOverManager.Instance.TriggerGameOver();
+        }
     }
 
     public void LoseMoney(int amount)
     {
         money -= amount;
+        if (money <= 0)
+        {
+            GameOverManager.Instance.TriggerGameOver();
+        }
     }
 
 }
