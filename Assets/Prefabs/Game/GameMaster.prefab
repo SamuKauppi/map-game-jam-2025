@@ -170,7 +170,7 @@ MonoBehaviour:
   time: 10
   horseStamina: 10
   money: 100
-  moveSpeed: 1
+  moveSpeed: 2
 --- !u!1 &8510173467408092119
 GameObject:
   m_ObjectHideFlags: 0
