@@ -71,5 +71,6 @@ public class RouteManager : MonoBehaviour
         currentRoute.IsClickable = true;
         currentRoute.ChangeAlpha(0.5f);
         ShowCurrentRoads();
+        GameManager.Instance.ReachedDestination(currentPoint);
     }
 }
