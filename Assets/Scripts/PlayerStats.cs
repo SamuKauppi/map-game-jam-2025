@@ -88,7 +88,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHealthUI(health);
         if(health <= 0)
         {
-            EventManager.Instance.ShowEndGame();
+            EventManager.Instance.ShowEndGame("hp");
         }
     }
 
@@ -112,7 +112,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateTimeUI(time);
         if (time <= 0)
         {
-            EventManager.Instance.ShowEndGame();
+            EventManager.Instance.ShowEndGame("time");
         }
     }
 

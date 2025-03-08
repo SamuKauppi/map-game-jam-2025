@@ -23,6 +23,7 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] private GameObject closeOptions;
     [SerializeField] private Sprite gameOverSprite;
+    [SerializeField] private Sprite gameOverSprite2;
 
     private Event currentEvent;
 
@@ -116,7 +117,7 @@ public class EventManager : MonoBehaviour
         PlayerStats.Instance.IsPausedForEvent = false;
     }
 
-    public void ShowEndGame()
+    public void ShowEndGame(string loseType)
     {
         if (currentEvent == null) return;
         popUpWindow.SetActive(true);
@@ -124,7 +125,11 @@ public class EventManager : MonoBehaviour
         popUpOptions.SetActive(false);
         quitScreen.SetActive(true);
         popup_txt.text = currentEvent.gameOverText;
-        popup_img.sprite = gameOverSprite;
+
+        if (loseType == "time")
+            popup_img.sprite = gameOverSprite;
+        else
+            popup_img.sprite = gameOverSprite2;
     }
 
     public void QuitToMainMenu()

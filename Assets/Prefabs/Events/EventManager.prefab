@@ -458,6 +458,7 @@ MonoBehaviour:
   choice2_txt: {fileID: 447594673892049185}
   closeOptions: {fileID: 1836439997145030097}
   gameOverSprite: {fileID: 21300000, guid: 32a1218f5604c8c469c570fd864a87e9, type: 3}
+  gameOverSprite2: {fileID: 21300000, guid: 32a1218f5604c8c469c570fd864a87e9, type: 3}
 --- !u!1 &3763526458871152876
 GameObject:
   m_ObjectHideFlags: 0
