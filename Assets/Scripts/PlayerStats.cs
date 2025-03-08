@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] private int time = 10;
     [SerializeField] private int horseStamina = 10;
+    [SerializeField] private int money = 100;
 
 
     private void Awake()
@@ -85,6 +86,9 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
     }
 
-
+    public void LoseMoney(int amount)
+    {
+        money -= amount;
+    }
 
 }

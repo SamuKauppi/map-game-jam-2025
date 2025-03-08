@@ -13,15 +13,20 @@ public class Route : MonoBehaviour
 
     [SerializeField] private RoutePoint startPoint;
     [SerializeField] private RoutePoint endPoint;
-
-    [SerializeField] private Transform[] playerMovePath;
     [SerializeField] private float moveTime = 1f;
+
+    private readonly Transform[] playerMovePath;
 
     private void Start()
     {
-        Transform[] movePath = new Transform[playerMovePath.Length + 2];
+        Transform[] movePath = new Transform[transform.childCount + 2];
         movePath[0] = startPoint.transform;
-        movePath.AddRange(playerMovePath);
+
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            movePath[i + 1] = transform.GetChild(i).transform;
+        }
+
         movePath[^1] = endPoint.transform;
 
         ChangeAlpha(0.5f);
