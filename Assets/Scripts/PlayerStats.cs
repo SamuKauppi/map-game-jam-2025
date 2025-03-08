@@ -54,7 +54,7 @@ public class PlayerStats : MonoBehaviour
             if (!eventWasActivated && currentSegment >= halfPoint)
             {
                 // Try to activate event
-                //IsPausedForEvent = EventManager.Instance.TriggerEvent();
+                IsPausedForEvent = EventManager.Instance.TriggerEvent(routeType);
                 eventWasActivated = true;
             }
         }
