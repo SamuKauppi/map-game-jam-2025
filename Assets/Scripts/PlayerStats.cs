@@ -134,8 +134,8 @@ public class PlayerStats : MonoBehaviour
         float distance = Vector2.Distance(startPos.position, endPos.position);
 
         float time = distance * RouteMultiplier(type) * timeDifficultyScale;
-        float stamina = distance * staminaDifficultyScale * RouteMultiplier(type);
-
+        float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
+        float health = distance * StormManager.Instance.stormDamage;
 
         if (type == RouteType.Road || type == RouteType.Offroad)
         {
@@ -150,7 +150,7 @@ public class PlayerStats : MonoBehaviour
         {
             HorseTired(Mathf.RoundToInt(stamina));
             time *= StormManager.Instance.stormMultiplier;
-            DoDamage(StormManager.Instance.stormDamage);
+            DoDamage(Mathf.RoundToInt(health));
         }
 
         TakeTime(time);
