@@ -15,27 +15,27 @@ public class GameOverManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        StartCoroutine(CheckGameOver());
-    }
+    //private void Start()
+    //{
+    //    StartCoroutine(CheckGameOver());
+    //}
 
-    private IEnumerator CheckGameOver()
-    {
-        while (true)
-        {
-            if (PlayerStats.Instance != null)
-            {
-                if (PlayerStats.Instance.Health <= 0 ||
-                    PlayerStats.Instance.GameTime <= 0)
-                {
-                    TriggerGameOver();
-                    yield break;
-                }
-            }
-            yield return new WaitForSeconds(0.5f);
-        }
-    }
+    //private IEnumerator CheckGameOver()
+    //{
+    //    while (true)
+    //    {
+    //        if (PlayerStats.Instance != null)
+    //        {
+    //            if (PlayerStats.Instance.Health <= 0 ||
+    //                PlayerStats.Instance.GameTime <= 0)
+    //            {
+    //                TriggerGameOver();
+    //                yield break;
+    //            }
+    //        }
+    //        yield return new WaitForSeconds(0.5f);
+    //    }
+    //}
 
     public void TriggerGameOver()
     {

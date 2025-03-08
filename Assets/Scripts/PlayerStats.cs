@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
     public bool IsPausedForEvent { get; set; } = false;
 
     [SerializeField] private int health = 100;
-    [SerializeField] private int time = 10;
+    [SerializeField] private float time = 10;
     [SerializeField] private int horseStamina = 100;
     [SerializeField] private int money = 300;
     [SerializeField] private float moveSpeed = 10f;
@@ -15,10 +15,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float staminaDifficultyScale = 5f;
     [SerializeField] private float timeDifficultyScale = 0.1f;
 
-    public int Health => health;
-    public int GameTime => time;
-    public int HorseStamina => horseStamina;
-    public int Money => money;
+    //public int Health => health;
+    //public int GameTime => time;
+    //public int HorseStamina => horseStamina;
+    //public int Money => money;
 
     private void Awake()
     {
@@ -36,7 +36,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHealthUI(health);
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         UiManager.Instance.UpdateMoneyUI(money);
-        UiManager.Instance.UpdateTimeUI(time);
+        UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         UiManager.Instance.UpdateWeatherUI(weather);
     }
 
@@ -108,10 +108,10 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("Lost money: " + amount);
     }
 
-    public void TakeTime(int TakenTime)
+    public void TakeTime(float TakenTime)
     {
         time -= TakenTime;
-        UiManager.Instance.UpdateTimeUI(time);
+        UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         Debug.Log("Time taken: " + TakenTime);
         if (time <= 0)
         {
@@ -133,11 +133,14 @@ public class PlayerStats : MonoBehaviour
     { 
         float distance = Vector2.Distance(startPos.position, endPos.position);
 
-        float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
+        if (type == RouteType.Road || type == RouteType.Offroad)
+        {
+            float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
+            HorseTired(Mathf.RoundToInt(stamina));
+        }
+            
         float time = distance * RouteMultiplier(type) * timeDifficultyScale;
-
-        TakeTime(Mathf.RoundToInt(time));
-        HorseTired(Mathf.RoundToInt(stamina));
+        TakeTime(time);
     }
 
     private float RouteMultiplier(RouteType type)
