@@ -83,17 +83,16 @@ public class PlayerStats : MonoBehaviour
         transform.position = points[^1].position;
         RouteManager.Instance.CompletedMovement();
     }
-
+    public bool IsPlayerDead()
+    {
+        return health <= 0 || time <= 0;
+    }
 
     public void DoDamage(int damage)
     {
         health -= damage;
         UiManager.Instance.UpdateHealthUI(health);
         Debug.Log("Health lost: " + damage);
-        if (health <= 0)
-        {
-            EventManager.Instance.ShowEndGame("hp");
-        }
     }
 
     public void HorseTired(int HorseStaminaMinus)
@@ -117,10 +116,6 @@ public class PlayerStats : MonoBehaviour
         time -= TakenTime;
         UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         Debug.Log("Time taken: " + TakenTime);
-        if (time <= 0)
-        {
-            EventManager.Instance.ShowEndGame("time");
-        }
     }
 
     public void SetPlayerPos(Vector2 newLocation)
