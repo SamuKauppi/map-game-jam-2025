@@ -8,7 +8,6 @@ public class Route : MonoBehaviour
     public bool IsClickable { get; set; } = true;
 
     [SerializeField] private RouteType type;
-    [SerializeField] private HazardType hazardType;
     [SerializeField] private SpriteRenderer spriteRend;
 
     [SerializeField] private RoutePoint startPoint;
