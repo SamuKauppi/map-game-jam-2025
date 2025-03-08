@@ -48,7 +48,7 @@ public class RouteManager : MonoBehaviour
         currentRoute = targetRoute;
 
         // Move Player
-        PlayerStats.Instance.PlayerMove(movePath);
+        PlayerStats.Instance.PlayerMove(movePath, targetRoute.RouteType);
 
         // Show only current route
         foreach (Route route in routes)
@@ -71,5 +71,6 @@ public class RouteManager : MonoBehaviour
         currentRoute.IsClickable = true;
         currentRoute.ChangeAlpha(0.5f);
         ShowCurrentRoads();
+        GameManager.Instance.ReachedDestination(currentPoint);
     }
 }

@@ -6,17 +6,19 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
 
-    [SerializeField] private Event[] events;
+    [SerializeField] private int eventChance = 20;
+
+    [SerializeField] private Event[] landEvents;
+    [SerializeField] private Event[] waterEvents;
 
     [SerializeField] private GameObject popUpWindow;
+    [SerializeField] private GameObject popUpOptions;
     [SerializeField] private Image popup_img;
     [SerializeField] private TMP_Text popup_txt;
     [SerializeField] private TMP_Text choice1_txt;
     [SerializeField] private TMP_Text choice2_txt;
 
-    [SerializeField] private GameObject closeWindow;
-    [SerializeField] private Image close_img;
-    [SerializeField] private TMP_Text close_txt;
+    [SerializeField] private GameObject closeOptions;
 
     private Event currentEvent;
 
@@ -31,15 +33,13 @@ public class EventManager : MonoBehaviour
     private void Start()
     {
         popUpWindow.SetActive(false);
-        closeWindow.SetActive(false);
+        closeOptions.SetActive(false);
+        popUpOptions.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            TriggerEvent(EventType.Moose);
-        }
+        
     }
 
     private void HandleStatChange(StatType type, int amount)
@@ -63,43 +63,51 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void TriggerEvent(EventType type)
+    public bool TriggerEvent(RouteType rType)
     {
+        int roll = Random.Range(0, 101);
 
-        foreach (Event e in events)
+        // Return if the event wont happen.
+        if (roll > eventChance)
         {
-            if (e.type == type)
-            {
-                currentEvent = e;
-                break;
-            }
+            return false;
         }
 
+        if (rType == RouteType.Road || rType == RouteType.Offroad)
+            currentEvent = landEvents[roll % landEvents.Length];
+
+        else
+            currentEvent = waterEvents[roll % waterEvents.Length];
+
+
         if (currentEvent == null)
-            return;
+            return false;
 
         popUpWindow.SetActive(true);
-        closeWindow.SetActive(false);
+        popUpOptions.SetActive(true);
+        closeOptions.SetActive(false);
 
         popup_img.sprite = currentEvent.eventSprite;
         popup_txt.text = currentEvent.eventText;
         choice1_txt.text = currentEvent.option1Txt;
         choice2_txt.text = currentEvent.option2Txt;
-
-        close_img.sprite = currentEvent.eventSprite;
+        return true;
     }
 
     public void CloseEvent(int choice)
     {
-        popUpWindow.SetActive(false);
-        closeWindow.SetActive(true);
-        close_txt.text = choice == 0 ? currentEvent.option1EndTxt : currentEvent.option2EndTxt;
+        popUpOptions.SetActive(false);
+        closeOptions.SetActive(true);
+        popup_txt.text = choice == 0 ? currentEvent.option1EndTxt : currentEvent.option2EndTxt;
+        popup_img.sprite = currentEvent.eventSprite;
         HandleStatChange(choice == 0 ? currentEvent.option1 : currentEvent.option2, choice == 0 ? currentEvent.amount1 : currentEvent.amount2);
     }
 
     public void StopEvent()
     {
         popUpWindow.SetActive(false);
-        closeWindow.SetActive(false);
+        popUpOptions.SetActive(false);
+        closeOptions.SetActive(false);
+        PlayerStats.Instance.IsPausedForEvent = false;
     }
 }

@@ -1,16 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
     public static PlayerStats Instance { get; private set; }
+    public bool IsPausedForEvent { get; set; } = false;
+
     [SerializeField] private int health = 100;
     [SerializeField] private int time = 10;
     [SerializeField] private int horseStamina = 10;
     [SerializeField] private int money = 100;
     [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private bool weather = false;
 
     public int Health => health;
     public int GameTime => time;
@@ -28,15 +29,30 @@ public class PlayerStats : MonoBehaviour
         Instance = this;
     }
 
-    private IEnumerator MoveBetweenPoints(Transform[] points, EventType type)
+    private void Start()
+    {
+        UiManager.Instance.UpdateHealthUI(health);
+        UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
+        UiManager.Instance.UpdateMoneyUI(money);
+        UiManager.Instance.UpdateTimeUI(time);
+        UiManager.Instance.UpdateWeatherUI(weather);
+    }
+
+    private IEnumerator MoveBetweenPoints(Transform[] points, RouteType routeType)
     {
         int numSegments = points.Length - 1;
+        int halfPoint = numSegments / 2;
         // Start at the first point
         transform.position = points[0].position;
         int currentSegment = 0;
 
+        // Try to activate event once
+        bool eventWasActivated = false;
+
         while (currentSegment < numSegments)
         {
+            yield return new WaitWhile(() => IsPausedForEvent);
+
             Vector3 target = points[currentSegment + 1].position;
             // MoveTowards moves by a fixed distance per frame, ensuring constant speed.
             transform.position = Vector3.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
@@ -48,10 +64,19 @@ public class PlayerStats : MonoBehaviour
             }
 
             yield return null;
+
+            // Check if event happens
+            if (!eventWasActivated && currentSegment >= halfPoint)
+            {
+                // Try to activate event
+                IsPausedForEvent = EventManager.Instance.TriggerEvent(routeType);
+                eventWasActivated = true;
+                Debug.Log("Trigger " + IsPausedForEvent);
+            }
         }
 
         // Ensure the transform ends exactly at the last point.
-        transform.position = points[points.Length - 1].position;
+        transform.position = points[^1].position;
         RouteManager.Instance.CompletedMovement();
     }
 
@@ -65,11 +90,9 @@ public class PlayerStats : MonoBehaviour
     public void SetPlayerPos(Vector2 newLocation)
     {
         transform.position = newLocation;
-        UiManager.Instance.UpdatePlayerLocationUI(transform.position);
     }
-    public void PlayerMove(Transform[] moveRoute)
+    public void PlayerMove(Transform[] moveRoute, RouteType type)
     {
-        EventType type = EventType.FallingTree;
         StartCoroutine(MoveBetweenPoints(moveRoute, type));
     }
 
