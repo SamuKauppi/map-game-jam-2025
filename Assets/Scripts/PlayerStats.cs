@@ -11,6 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int horseStamina = 10;
     [SerializeField] private int money = 100;
     [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private bool weather = false;
 
     private void Awake()
     {
@@ -21,6 +22,15 @@ public class PlayerStats : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void Start()
+    {
+        UiManager.Instance.UpdateHealthUI(health);
+        UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
+        UiManager.Instance.UpdateMoneyUI(money);
+        UiManager.Instance.UpdateTimeUI(time);
+        UiManager.Instance.UpdateWeatherUI(weather);
     }
 
     private IEnumerator MoveBetweenPoints(Transform[] points, RouteType routeType)

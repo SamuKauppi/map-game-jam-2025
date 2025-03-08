@@ -28,21 +28,28 @@ public class UiManager : MonoBehaviour
 
     public void UpdateHealthUI(int health)
     {
-        healthText.text = "Health: " + health;
+        healthText.text = "" + health;
     }
 
     public void UpdateHorseStaminaUI(int stamina)
     {
-        horseStaminaText.text = "Stamina: " + stamina;
+        horseStaminaText.text = "" + stamina;
     }
     public void UpdateMoneyUI(int money)
     {
-        horseStaminaText.text = "Money: " + money;
+        horseStaminaText.text = "" + money;
     }
 
     public void UpdateTimeUI(int time)
     {
-        timeText.text = "Time: " + time;
+        timeText.text = time + "h";
+    }
+    public void UpdateWeatherUI(bool weather)
+    {
+        if (weather)
+            weatherText.text = "Storm";
+        else
+            weatherText.text = "Clear";
     }
 
     public void UpdatePlayerLocationUI(Vector2 playerLocation)
