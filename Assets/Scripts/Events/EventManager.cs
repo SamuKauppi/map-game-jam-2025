@@ -89,6 +89,7 @@ public class EventManager : MonoBehaviour
         popup_txt.text = currentEvent.eventText;
         choice1_txt.text = currentEvent.option1Txt;
         choice2_txt.text = currentEvent.option2Txt;
+
         return true;
     }
 
@@ -99,6 +100,7 @@ public class EventManager : MonoBehaviour
         popup_txt.text = choice == 0 ? currentEvent.option1EndTxt : currentEvent.option2EndTxt;
         popup_img.sprite = currentEvent.eventSprite;
         HandleStatChange(choice == 0 ? currentEvent.option1 : currentEvent.option2, choice == 0 ? currentEvent.amount1 : currentEvent.amount2);
+        currentEvent = null;
     }
 
     public void StopEvent()
