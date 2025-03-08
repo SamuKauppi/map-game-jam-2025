@@ -12,7 +12,6 @@ public class Route : MonoBehaviour
 
     [SerializeField] private RoutePoint startPoint;
     [SerializeField] private RoutePoint endPoint;
-    [SerializeField] private float moveTime = 1f;
 
     private Transform[] playerMovePath;
 
@@ -76,7 +75,7 @@ public class Route : MonoBehaviour
         }
 
         if (targetPoint != null)
-            RouteManager.Instance.MoveThroughRoute(targetPoint, this, movePath, moveTime);
+            RouteManager.Instance.MoveThroughRoute(targetPoint, this, movePath);
     }
 
 

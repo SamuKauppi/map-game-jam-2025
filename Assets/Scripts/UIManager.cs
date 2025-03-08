@@ -20,7 +20,6 @@ public class UiManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
 

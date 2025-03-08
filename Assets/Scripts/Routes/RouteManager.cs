@@ -41,14 +41,14 @@ public class RouteManager : MonoBehaviour
         }
     }
 
-    public void MoveThroughRoute(RoutePoint targetPoint, Route targetRoute, Transform[] movePath, float moveTime)
+    public void MoveThroughRoute(RoutePoint targetPoint, Route targetRoute, Transform[] movePath)
     {
         // Update currentPoint
         currentPoint = targetPoint;
         currentRoute = targetRoute;
 
         // Move Player
-        PlayerStats.Instance.PlayerMove(movePath, moveTime);
+        PlayerStats.Instance.PlayerMove(movePath);
 
         // Show only current route
         foreach (Route route in routes)
