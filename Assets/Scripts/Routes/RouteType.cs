@@ -1,7 +1,7 @@
 ﻿public enum RouteType
 {
     Road,
-    Forrest,
+    Offroad,
     Ship,
     Boat,
 }
