@@ -189,11 +189,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.data[1].type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].type
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.data[0].amount1
@@ -220,6 +228,38 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].amount1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].amount2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].option1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].option2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].amount1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].amount2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].option1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].option2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.data[0].eventText
       value: "A horned giant of the forest rushes through the trees, driven mad by
         hunt. As it runs towards you, you can\u2019t but marvel at its size: like
@@ -231,6 +271,20 @@ PrefabInstance:
         a tree. \u201CLookie lookie, it\u2019s mighty fine gentleman, riding a pretty
         horsie. You got some mail for us?\u201D says a man with smile like a wolf
         and arms like tree trunks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].eventText
+      value: 'Its starts with a loud crack, followed by birds flying away. Once mighty
+        maple tree, home to who-knows many generations of squirrels, comes down with
+        a sorrowful thump. Right in the middle of the road you were on. The only
+        road through otherwise untravellable patch of forest you found yourself on. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].eventText
+      value: 'Its starts with a loud crack, followed by birds flying away. Once mighty
+        maple tree, home to who-knows many generations of squirrels, comes down with
+        a sorrowful thump. Right in the middle of the road you were on. The only
+        road through otherwise untravellable patch of forest you found yourself on. '
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.data[0].option1Txt
@@ -251,6 +305,22 @@ PrefabInstance:
         from death cold clutches of my hands!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].option1Txt
+      value: Put the nag to work
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].option2Txt
+      value: Wander into the green maze
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].option1Txt
+      value: Put the nag to work
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].option2Txt
+      value: Wander into the green maze
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.data[0].eventSprite
       value: 
       objectReference: {fileID: 21300000, guid: 6ddff37bc269d1241bf1a68fa6345496, type: 3}
@@ -258,6 +328,14 @@ PrefabInstance:
       propertyPath: events.Array.data[1].eventSprite
       value: 
       objectReference: {fileID: 21300000, guid: a821530ef736553468cf7d189cb6622b, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8b23509ae0f07841ba880b6a831b857, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8b23509ae0f07841ba880b6a831b857, type: 3}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: events.Array.data[0].option1EndTxt
       value: "No beast of land, be it size like insect or behemoth, shall stand in
@@ -292,6 +370,44 @@ PrefabInstance:
         stones can however still break your bones and while you\u2019re finished
         with the bandits, you\u2019re bloodied, bruised and you\u2019re not physician
         but you reckon your fingers should not bend that way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].option1EndTxt
+      value: "Your proud horse might think itself as finest specimen around: the
+        one that valiantly gallops through the lands, hurrying heroes from places
+        to another, while its lesser elk huff and puff days on end of ploughs and
+        pulling tree stumps. So, it\u2019s a quite a surprise for it when you tie
+        a rope into its saddle and other end to the fallen tree. After some time
+        of sweating and neighs of protests, the tree is out of the way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[2].option2EndTxt
+      value: "You resign yourself to finding a new road in the bright, verdant and
+        awfully tiring forest surround you. After hours of getting lost, being sting
+        seemingly by every single insect on God\u2019s green Earth and smashing your
+        foot in a tree stump you swear just appeared there to trip you, you start
+        to wonder if the forest has mind of its own and hates you. After finally
+        stumbling your way to the civilization, you swear to yourself to return to
+        this forest one day to burn to whole damn place down. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].option1EndTxt
+      value: "Your proud horse might think itself as finest specimen around: the
+        one that valiantly gallops through the lands, hurrying heroes from places
+        to another, while its lesser elk huff and puff days on end of ploughs and
+        pulling tree stumps. So, it\u2019s a quite a surprise for it when you tie
+        a rope into its saddle and other end to the fallen tree. After some time
+        of sweating and neighs of protests, the tree is out of the way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: events.Array.data[3].option2EndTxt
+      value: "You resign yourself to finding a new road in the bright, verdant and
+        awfully tiring forest surround you. After hours of getting lost, being sting
+        seemingly by every single insect on God\u2019s green Earth and smashing your
+        foot in a tree stump you swear just appeared there to trip you, you start
+        to wonder if the forest has mind of its own and hates you. After finally
+        stumbling your way to the civilization, you swear to yourself to return to
+        this forest one day to burn to whole damn place down. "
       objectReference: {fileID: 0}
     - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -536,6 +652,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c827e023e6681684cbc318c3b70c8936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x_bounds: {x: 0, y: 0}
+  y_bounds: {x: 0, y: 0}
   cam: {fileID: 1732642691}
   minZoom: 2
   maxZoom: 10
