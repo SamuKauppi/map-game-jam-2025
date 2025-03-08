@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             }
             if (progress == 1)
             {
-                SceneManager.LoadScene(1);
+                SceneLoader.Instance.LoadScene(SceneType.Win);
             }
             progress++;
         }

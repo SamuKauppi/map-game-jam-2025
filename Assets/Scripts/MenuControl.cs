@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MenuControl : MonoBehaviour
 {
+    [SerializeField] private SceneType sceneToLoad;
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneLoader.Instance.LoadScene(sceneToLoad);
     }
 }

@@ -120,6 +120,7 @@ public class EventManager : MonoBehaviour
     public void ShowEndGame(string loseType)
     {
         if (currentEvent == null) return;
+
         popUpWindow.SetActive(true);
         closeOptions.SetActive(false);
         popUpOptions.SetActive(false);
@@ -134,6 +135,6 @@ public class EventManager : MonoBehaviour
 
     public void QuitToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneLoader.Instance.LoadScene(SceneType.Lose);
     }
 }

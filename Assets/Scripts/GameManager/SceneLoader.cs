@@ -4,10 +4,42 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
-    [SerializeField] private int sceneId;
+    public static SceneLoader Instance { get; private set; }
 
-    public void LoadScene()
+    private void Awake()
     {
-        SceneManager.LoadScene(sceneId);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
     }
+
+    public void LoadScene(SceneType type)
+    {
+        var index = type switch
+        {
+            SceneType.Menu => 0,
+            SceneType.Game => 1,
+            SceneType.Win => 2,
+            SceneType.Lose => 3,
+            _ => 0,
+        };
+        SceneManager.LoadScene(index);
+    }
+
+    public void LoadScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+}
+
+public enum SceneType
+{
+    Menu,
+    Game,
+    Win,
+    Lose
 }
