@@ -56,6 +56,7 @@ public class PlayerStats : MonoBehaviour
                 // Try to activate event
                 IsPausedForEvent = EventManager.Instance.TriggerEvent(routeType);
                 eventWasActivated = true;
+                Debug.Log("Trigger " + IsPausedForEvent);
             }
         }
 

@@ -67,8 +67,10 @@ public class EventManager : MonoBehaviour
         int roll = Random.Range(0, 101);
 
         // Return if the event wont happen.
-        if ( roll > chance)
+        if (roll > chance)
+        {
             return false;
+        }
 
         if (rType == RouteType.Road || rType == RouteType.Offroad)
             currentEvent = landEvents[roll % landEvents.Length];
@@ -104,5 +106,6 @@ public class EventManager : MonoBehaviour
     {
         popUpWindow.SetActive(false);
         closeWindow.SetActive(false);
+        PlayerStats.Instance.IsPausedForEvent = false;
     }
 }
