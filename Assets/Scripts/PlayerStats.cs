@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int money = 300;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private bool weather = false;
-    [SerializeField] private float staminaDifficultyScale = 1f;
+    [SerializeField] private float staminaDifficultyScale = 5f;
 
     public int Health => health;
     public int GameTime => time;
@@ -103,6 +103,7 @@ public class PlayerStats : MonoBehaviour
     public void LoseMoney(int amount)
     {
         money -= amount;
+        UiManager.Instance.UpdateMoneyUI(money);
     }
 
     public void TakeTime(int TakenTime)
