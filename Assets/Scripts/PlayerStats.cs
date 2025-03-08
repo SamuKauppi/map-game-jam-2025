@@ -12,6 +12,11 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int money = 100;
     [SerializeField] private float moveSpeed = 10f;
 
+    public int Health => health;
+    public int GameTime => time;
+    public int HorseStamina => horseStamina;
+    public int Money => money;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
