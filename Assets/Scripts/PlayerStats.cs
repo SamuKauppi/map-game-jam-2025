@@ -8,11 +8,11 @@ public class PlayerStats : MonoBehaviour
 
     [SerializeField] private int health = 100;
     [SerializeField] private int time = 10;
-    [SerializeField] private int horseStamina = 10;
-    [SerializeField] private int money = 100;
+    [SerializeField] private int horseStamina = 100;
+    [SerializeField] private int money = 300;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private bool weather = false;
-    [SerializeField] private float staminaDifficultyScale = 0.1f;
+    [SerializeField] private float staminaDifficultyScale = 1f;
 
     public int Health => health;
     public int GameTime => time;
@@ -96,6 +96,8 @@ public class PlayerStats : MonoBehaviour
     {
         horseStamina -= HorseStaminaMinus;
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
+        //Debug.Log(HorseStaminaMinus);
+        //Debug.Log(horseStamina);
     }
 
     public void LoseMoney(int amount)
@@ -126,6 +128,7 @@ public class PlayerStats : MonoBehaviour
     private void DecreaseStaminaWhileMoving(Transform startPos, Transform endPos, RouteType type) 
     { 
         float distance = Vector2.Distance(startPos.position, endPos.position);
+        Debug.Log(distance);
         float decrease = distance * RouteMultiplier(type) * staminaDifficultyScale;
         HorseTired(Mathf.RoundToInt(decrease));
     }
