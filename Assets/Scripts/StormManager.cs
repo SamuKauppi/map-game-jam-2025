@@ -7,7 +7,7 @@ public class StormManager : MonoBehaviour
     public static StormManager Instance { get; private set; }
 
     private int stormDuration = 3;
-    private int timebeforeStorm = 1;
+    //private int timebeforeStorm = 1;
     public bool isStorm = false;
     public float stormMultiplier = 2f;
     public int stormDamage = 10;
@@ -33,10 +33,7 @@ public class StormManager : MonoBehaviour
         {
             int roll = Random.Range(0, 101);
             if (roll < stormChance)
-            {
-                Debug.Log("Storm started");
                 StartStorm();
-            }
         }
     }
 
@@ -45,12 +42,13 @@ public class StormManager : MonoBehaviour
         isStorm = true;
         stormStart = PlayerStats.Instance.GameTime;
         UiManager.Instance.UpdateWeatherUI(true);
+        Debug.Log("Storm started");
     }
 
     private void ContinueStorm()
     {
-        float time = PlayerStats.Instance.GameTime;
-        float timeFromStart = stormStart - time;
+        float timeFromStart = stormStart - PlayerStats.Instance.GameTime;
+        Debug.Log("Storm has been raging on for: " + timeFromStart + " hours.");
         if ((timeFromStart) > stormDuration )
             EndStorm();
     }
@@ -59,5 +57,6 @@ public class StormManager : MonoBehaviour
     {
         isStorm = false;
         UiManager.Instance.UpdateWeatherUI(false);
+        Debug.Log("Storm Ended");
     }
 }
