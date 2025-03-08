@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private bool weather = false;
     [SerializeField] private float staminaDifficultyScale = 5f;
+    [SerializeField] private float timeDifficultyScale = 0.1f;
 
     public int Health => health;
     public int GameTime => time;
@@ -86,7 +87,8 @@ public class PlayerStats : MonoBehaviour
     {
         health -= damage;
         UiManager.Instance.UpdateHealthUI(health);
-        if(health <= 0)
+        Debug.Log("Health lost: " + damage);
+        if (health <= 0)
         {
             EventManager.Instance.ShowEndGame("hp");
         }
@@ -96,20 +98,21 @@ public class PlayerStats : MonoBehaviour
     {
         horseStamina -= HorseStaminaMinus;
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
-        //Debug.Log(HorseStaminaMinus);
-        //Debug.Log(horseStamina);
+        Debug.Log("Stamina used: " + HorseStaminaMinus);
     }
 
     public void LoseMoney(int amount)
     {
         money -= amount;
         UiManager.Instance.UpdateMoneyUI(money);
+        Debug.Log("Lost money: " + amount);
     }
 
     public void TakeTime(int TakenTime)
     {
         time -= TakenTime;
         UiManager.Instance.UpdateTimeUI(time);
+        Debug.Log("Time taken: " + TakenTime);
         if (time <= 0)
         {
             EventManager.Instance.ShowEndGame("time");
@@ -122,16 +125,19 @@ public class PlayerStats : MonoBehaviour
     }
     public void PlayerMove(Transform[] moveRoute, RouteType type)
     {
-        DecreaseStaminaWhileMoving(moveRoute[0], moveRoute[moveRoute.Length - 1], type);
+        MovingStaminaAndTimeDecrease(moveRoute[0], moveRoute[moveRoute.Length - 1], type);
         StartCoroutine(MoveBetweenPoints(moveRoute, type));
     }
 
-    private void DecreaseStaminaWhileMoving(Transform startPos, Transform endPos, RouteType type) 
+    private void MovingStaminaAndTimeDecrease(Transform startPos, Transform endPos, RouteType type) 
     { 
         float distance = Vector2.Distance(startPos.position, endPos.position);
-        Debug.Log(distance);
-        float decrease = distance * RouteMultiplier(type) * staminaDifficultyScale;
-        HorseTired(Mathf.RoundToInt(decrease));
+
+        float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
+        float time = distance * RouteMultiplier(type) * timeDifficultyScale;
+
+        TakeTime(Mathf.RoundToInt(time));
+        HorseTired(Mathf.RoundToInt(stamina));
     }
 
     private float RouteMultiplier(RouteType type)

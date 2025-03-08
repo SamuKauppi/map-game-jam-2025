@@ -3330,6 +3330,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
+      propertyPath: timeDifficultyScale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
       propertyPath: staminaDifficultyScale
       value: 5
       objectReference: {fileID: 0}
