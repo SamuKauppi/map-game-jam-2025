@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -14,6 +15,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private bool weather = false;
     [SerializeField] private float staminaDifficultyScale = 5f;
     [SerializeField] private float timeDifficultyScale = 0.1f;
+    [SerializeField] private float horseisTiredMultipier = 3f;
 
     //public int Health => health;
     //public int GameTime => time;
@@ -97,6 +99,8 @@ public class PlayerStats : MonoBehaviour
     public void HorseTired(int HorseStaminaMinus)
     {
         horseStamina -= HorseStaminaMinus;
+        if (horseStamina <= 0)
+            horseStamina = 0;
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         Debug.Log("Stamina used: " + HorseStaminaMinus);
     }
@@ -132,14 +136,22 @@ public class PlayerStats : MonoBehaviour
     private void MovingStaminaAndTimeDecrease(Transform startPos, Transform endPos, RouteType type) 
     { 
         float distance = Vector2.Distance(startPos.position, endPos.position);
+        float time;
 
         if (type == RouteType.Road || type == RouteType.Offroad)
         {
             float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
             HorseTired(Mathf.RoundToInt(stamina));
+
+            if (horseStamina == 0)
+            {
+                time = distance * RouteMultiplier(type) * timeDifficultyScale * horseisTiredMultipier;
+                TakeTime(time);
+                return;
+            }
         }
-            
-        float time = distance * RouteMultiplier(type) * timeDifficultyScale;
+
+        time = distance * RouteMultiplier(type) * timeDifficultyScale;
         TakeTime(time);
     }
 
