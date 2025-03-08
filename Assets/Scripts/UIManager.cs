@@ -35,9 +35,10 @@ public class UiManager : MonoBehaviour
     {
         horseStaminaText.text = "" + stamina;
     }
+
     public void UpdateMoneyUI(int money)
     {
-        horseStaminaText.text = "" + money;
+        moneyText.text = "" + money;
     }
 
     public void UpdateTimeUI(int time)

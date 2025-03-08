@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
             }
             if (progress == 1)
             {
-                Debug.Log("Game won");
+                SceneManager.LoadScene(1);
             }
             progress++;
         }
