@@ -23,6 +23,9 @@ public class Event
     public string option2Txt;
     [TextArea(3, 15)]
     public string option2EndTxt;
+
+    [TextArea(3, 10)]
+    public string gameOverText;
 }
 
 public enum StatType
