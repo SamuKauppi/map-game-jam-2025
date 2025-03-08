@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa3f8aec1a51ae74fa81c044d80e22e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventChance: 20
+  eventChance: 50
   landEvents: []
   waterEvents: []
   popUpWindow: {fileID: 1839944571710707295}
