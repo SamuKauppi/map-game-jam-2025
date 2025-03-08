@@ -12,9 +12,8 @@ public class Route : MonoBehaviour
 
     [SerializeField] private RoutePoint startPoint;
     [SerializeField] private RoutePoint endPoint;
-    [SerializeField] private float moveTime = 1f;
 
-    private readonly Transform[] playerMovePath;
+    private Transform[] playerMovePath;
 
     private void Start()
     {
@@ -28,7 +27,9 @@ public class Route : MonoBehaviour
 
         movePath[^1] = endPoint.transform;
 
-        ChangeAlpha(0.5f);
+        playerMovePath = movePath;
+
+        ChangeAlpha(0.75f);
     }
 
     private void OnMouseEnter()
@@ -42,7 +43,7 @@ public class Route : MonoBehaviour
     {
         if (!IsClickable) return;
 
-        ChangeAlpha(0.5f);
+        ChangeAlpha(0.75f);
     }
 
     private void OnMouseDown()
@@ -74,7 +75,7 @@ public class Route : MonoBehaviour
         }
 
         if (targetPoint != null)
-            RouteManager.Instance.MoveThroughRoute(targetPoint, this, movePath, moveTime);
+            RouteManager.Instance.MoveThroughRoute(targetPoint, this, movePath);
     }
 
 
