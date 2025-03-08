@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
 {
     public static UiManager Instance { get; private set; }
-    [SerializeField] private Text healthText;
-    [SerializeField] private Text timeText;
-    [SerializeField] private Text horseStaminaText;
-    [SerializeField] private Text PlayerLocationText;
+    [SerializeField] private TMP_Text healthText;
+    [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text horseStaminaText;
+    [SerializeField] private TMP_Text PlayerLocationText;
+    [SerializeField] private TMP_Text moneyText;
 
     private void Awake()
     {
@@ -25,17 +27,17 @@ public class UiManager : MonoBehaviour
 
     public void UpdateHealthUI(int health)
     {
-        //healthText.text = "Health: " + health;
+        healthText.text = "Health: " + health;
     }
 
     public void UpdateTimeUI(int time)
     {
-        //timeText.text = "Time: " + time;
+        timeText.text = "Time: " + time;
     }
 
     public void UpdateHorseStaminaUI(int stamina)
     {
-        //horseStaminaText.text = "HorseStamina: " + stamina;
+        horseStaminaText.text = "HorseStamina: " + stamina;
     }
 
     public void UpdatePlayerLocationUI(Vector2 playerLocation)
