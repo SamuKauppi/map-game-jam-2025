@@ -123,28 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &362417604 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3285821396887806527, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-  m_PrefabInstance: {fileID: 1822518714}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11571431471b1754a90c2a52c5a79e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1748011090 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6827630267536329668, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-  m_PrefabInstance: {fileID: 1822518714}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c30483878fafad84988e103a2637bd84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1822518714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,10 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2551811948116779495, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: endPoint
-      value: 
-      objectReference: {fileID: 1748011090}
     - target: {fileID: 2954326144919854596, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_Name
       value: GameMaster
@@ -201,21 +175,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: routes.Array.size
-      value: 65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: routes.Array.data[64]
-      value: 
-      objectReference: {fileID: 362417604}
-    - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: routes.Array.data[65]
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7655122269221732907, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
