@@ -44,7 +44,7 @@ public class EventManager : MonoBehaviour
 
     private void Update()
     {
-        
+
     }
 
     private void HandleStatChange(StatType type, int amount)
@@ -118,7 +118,7 @@ public class EventManager : MonoBehaviour
 
     public void ShowEndGame()
     {
-        if(currentEvent == null) return;
+        if (currentEvent == null) return;
         popUpWindow.SetActive(true);
         closeOptions.SetActive(false);
         popUpOptions.SetActive(false);

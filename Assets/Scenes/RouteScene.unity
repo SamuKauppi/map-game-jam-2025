@@ -289,14 +289,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMaster
       objectReference: {fileID: 0}
-    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: landEvents.Array.data[0].amount1
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: landEvents.Array.data[1].amount2
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 5328058787308515081, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

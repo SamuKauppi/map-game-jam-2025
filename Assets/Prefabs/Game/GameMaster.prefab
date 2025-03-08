@@ -2539,7 +2539,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1839944571710707295, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2342227167853521252, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_Name
@@ -2650,6 +2650,10 @@ PrefabInstance:
         stones can however still break your bones and while you\u2019re finished
         with the bandits, you\u2019re bloodied, bruised and you\u2019re not physician
         but you reckon your fingers should not bend that way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846383812208259766, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_LocalPosition.x
