@@ -4,4 +4,10 @@ public enum EventType
     Bandit,
     BoatDamage,
     FallingTree,
+    ManAboard,
+    ChangeBoat,
+    RoughTerrain,
+    Inn,
+    
+
 }

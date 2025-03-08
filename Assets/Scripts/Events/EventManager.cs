@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -42,24 +44,43 @@ public class EventManager : MonoBehaviour
         
     }
 
-    private void HandleStatChange(StatType type, int amount)
+    private void HandleStatChange(List<StatChange> changes)
     {
-        switch (type)
+        //switch (type)
+        //{
+        //    case StatType.Health:
+        //        PlayerStats.Instance.DoDamage(amount);
+        //        break;
+        //    case StatType.Stamina:
+        //        PlayerStats.Instance.HorseTired(amount);
+        //        break;
+        //    case StatType.Money:
+        //        PlayerStats.Instance.LoseMoney(amount);
+        //        break;
+        //    case StatType.Time:
+        //        PlayerStats.Instance.TakeTime(amount);
+        //        break;
+        //    default:
+        //        break;
+        //}
+
+        foreach (StatChange change in changes)
         {
-            case StatType.Health:
-                PlayerStats.Instance.DoDamage(amount);
-                break;
-            case StatType.Stamina:
-                PlayerStats.Instance.HorseTired(amount);
-                break;
-            case StatType.Money:
-                PlayerStats.Instance.LoseMoney(amount);
-                break;
-            case StatType.Time:
-                PlayerStats.Instance.TakeTime(amount);
-                break;
-            default:
-                break;
+            switch (change.type)
+            {
+                case StatType.Health:
+                    PlayerStats.Instance.DoDamage(change.amount);
+                    break;
+                case StatType.Stamina:
+                    PlayerStats.Instance.HorseTired(change.amount);
+                    break;
+                case StatType.Money:
+                    PlayerStats.Instance.LoseMoney(change.amount);
+                    break;
+                case StatType.Time:
+                    PlayerStats.Instance.TakeTime(change.amount);
+                    break;
+            }
         }
     }
 
@@ -98,9 +119,23 @@ public class EventManager : MonoBehaviour
     {
         popUpOptions.SetActive(false);
         closeOptions.SetActive(true);
-        popup_txt.text = choice == 0 ? currentEvent.option1EndTxt : currentEvent.option2EndTxt;
+        //popup_txt.text = choice == 0 ? currentEvent.option1EndTxt : currentEvent.option2EndTxt;
+        //popup_img.sprite = currentEvent.eventSprite;
+        ////HandleStatChange(choice == 0 ? currentEvent.option1 : currentEvent.option2, choice == 0 ? currentEvent.amount1 : currentEvent.amount2);
+        ///
+
+        if (choice == 0)
+        {
+            popup_txt.text = currentEvent.option1EndTxt;
+            HandleStatChange(currentEvent.option1Changes);
+        }
+        else
+        {
+            popup_txt.text = currentEvent.option2EndTxt;
+            HandleStatChange(currentEvent.option2Changes);
+        }
+
         popup_img.sprite = currentEvent.eventSprite;
-        HandleStatChange(choice == 0 ? currentEvent.option1 : currentEvent.option2, choice == 0 ? currentEvent.amount1 : currentEvent.amount2);
     }
 
     public void StopEvent()

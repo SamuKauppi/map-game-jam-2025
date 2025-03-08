@@ -2546,15 +2546,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[1].type
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].amount1
+      propertyPath: landEvents.Array.data[2].type
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].type
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].amount1
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[0].amount2
@@ -2566,15 +2586,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[1].amount1
-      value: 2
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[1].amount2
-      value: 4
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[1].option1
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].amount1
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].amount2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].amount1
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].amount1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].amount2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].amount1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].amount2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].option1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[0].eventText
@@ -2588,6 +2652,13 @@ PrefabInstance:
         a tree. \u201CLookie lookie, it\u2019s mighty fine gentleman, riding a pretty
         horsie. You got some mail for us?\u201D says a man with smile like a wolf
         and arms like tree trunks."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].eventText
+      value: 'Its starts with a loud crack, followed by birds flying away. Once mighty
+        maple tree, home to who-knows many generations of squirrels, comes down with
+        a sorrowful thump. Right in the middle of the road you were on. The only
+        road through otherwise untravellable patch of forest you found yourself on. '
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[0].option1Txt
@@ -2608,6 +2679,35 @@ PrefabInstance:
         from death cold clutches of my hands!\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Txt
+      value: Put the nag to work
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Txt
+      value: Wander into the green maze
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].eventText
+      value: "Young deckhand, hit by low flying seagull splashes into the ice-cold
+        ocean. Spluttering, flailing, he tries his best to keep head above water,
+        not wishing to sink into the deep, freezing blue. \u201CWill somebody help
+        that poor boy!\u201D scream one of the older sailors. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].eventText
+      value: "Curse that lazy shipwright who skipped the last round of tarring! The
+        rats were first one to notice, screeching and scrambling out of hull like
+        a storm of filthy fur and small incisors. Then, a big creak and shout from
+        men below the deck: \u201CWe\u2019re sinking! It\u2019s every man for himself!\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].eventText
+      value: "Curse that lazy shipwright who skipped the last round of tarring! The
+        rats were first one to notice, screeching and scrambling out of hull like
+        a storm of filthy fur and small incisors. Then, a big creak and shout from
+        men below the deck: \u201CWe\u2019re sinking! It\u2019s every man for himself!\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[0].eventSprite
       value: 
       objectReference: {fileID: 21300000, guid: 6ddff37bc269d1241bf1a68fa6345496, type: 3}
@@ -2615,6 +2715,67 @@ PrefabInstance:
       propertyPath: landEvents.Array.data[1].eventSprite
       value: 
       objectReference: {fileID: 21300000, guid: a821530ef736553468cf7d189cb6622b, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b8b23509ae0f07841ba880b6a831b857, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Txt
+      value: Dive into the waves
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option2Txt
+      value: "\u201CWe\u2019d both just sink\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Txt
+      value: 'Try to get into a lifeboat '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option2Txt
+      value: Swim for it
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].option1Txt
+      value: 'Try to get into a lifeboat '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].option2Txt
+      value: Swim for it
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].gameOverText
+      value: 'Before you can react, the maddened beast drives it horns through you.
+        As it rips them away, most of your guts go along with it. Gasping for breath,
+        you fall to the ground, blood soaking into moss. Last thing you see is a
+        stone-like hooves crushing from upwards. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].gameOverText
+      value: "After breaking half your bones, the bandits hang your corpse from a
+        dead tree. Your body, battered and bruised, becomes a feast for local crows,
+        while those papers you gave your life for will be used to wipe beer stains
+        off robber\u2019s face in some godforsaken inn. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].gameOverText
+      value: "But those dreams might be too grand, as when you finally get back to
+        Turku, turns out your wander through evergreen was just enough time for Bishop
+        to get very, very cross with you. Maybe staying in forest wouldn\u2019t have
+        been that bad? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d7cd86478bc8614c9a5e788f2488b31, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d7cd86478bc8614c9a5e788f2488b31, type: 3}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].eventSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d7cd86478bc8614c9a5e788f2488b31, type: 3}
     - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: landEvents.Array.data[0].option1EndTxt
       value: "No beast of land, be it size like insect or behemoth, shall stand in
@@ -2649,6 +2810,192 @@ PrefabInstance:
         stones can however still break your bones and while you\u2019re finished
         with the bandits, you\u2019re bloodied, bruised and you\u2019re not physician
         but you reckon your fingers should not bend that way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option1EndTxt
+      value: "Your proud horse might think itself as finest specimen around: the
+        one that valiantly gallops through the lands, hurrying heroes from places
+        to another, while its lesser elk huff and puff days on end of ploughs and
+        pulling tree stumps. So, it\u2019s a quite a surprise for it when you tie
+        a rope into its saddle and other end to the fallen tree. After some time
+        of sweating and neighs of protests, the tree is out of the way. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option2EndTxt
+      value: "You resign yourself to finding a new road in the bright, verdant and
+        awfully tiring forest surround you. After hours of getting lost, being sting
+        seemingly by every single insect on God\u2019s green Earth and smashing your
+        foot in a tree stump you swear just appeared there to trip you, you start
+        to wonder if the forest has mind of its own and hates you. After finally
+        stumbling your way to the civilization, you swear to yourself to return to
+        this forest one day to burn to whole damn place down. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].gameOverText
+      value: "The touch of ocean is calm and gentle. You sink below waves, the sinking
+        ship slowly fading away. You\u2019re too tired to swim against current anymore.
+        No more mud in boots. No more nights huddled in cold wilds. No more goddamned
+        letters. Just, deep, eternal blue."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].gameOverText
+      value: "The touch of ocean is calm and gentle. You sink below waves, the sinking
+        ship slowly fading away. You\u2019re too tired to swim against current anymore.
+        No more mud in boots. No more nights huddled in cold wilds. No more goddamned
+        letters. Just, deep, eternal blue."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1EndTxt
+      value: 'Before your mind even realizes, your body has already hit the water.
+        The shock of cold hits you even harder, but you manage to keep your wits.
+        Before your body stops from icy touch of ocean, you manage to drag yourself
+        and almost numb boy back to the boat. After some warm tea and lots of blankets,
+        the boy thanks you with little coin he has stashed away. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option2EndTxt
+      value: " \u2026 you tell yourself. \u201CThere must be better swimmer among
+        these men.\u201D With every reason, the boy sinks deeper into the sea, his
+        limbs sway slowly dying down and his screams fading. All you on the board
+        helplessly watch the ocean take boy that wasn\u2019t even a man yet. \u201CNothing
+        I could have done\u201D, you think and turn away. You almost believe yourself. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1EndTxt
+      value: "Short, mad fight for survival follows as people try to tear of anything
+        that\u2019ll float to save themselves. Men yell, women scream, and children
+        make noise like little animals they are. You avoid being taken into Kingdom
+        of Christ in wettest way possible by hitching a ride in a barrel. Unfortunately,
+        your new personal galley is much, much slower and you arrive much, much later
+        than anticipated. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option2EndTxt
+      value: "This ship is a coffin, floating down River Styx! You must get out,
+        even if means swimming for your life. Diving into the dark waters, the cold
+        hits you, but you\u2019re almost glad about it: if you\u2019re cold, that
+        means you\u2019re not in Hell yet. You sputter and splash, desperate to keep
+        above the water. When you get to land, you sputter a small lake worth of
+        water out if your lungs. But at least you survived. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].option1EndTxt
+      value: "Short, mad fight for survival follows as people try to tear of anything
+        that\u2019ll float to save themselves. Men yell, women scream, and children
+        make noise like little animals they are. You avoid being taken into Kingdom
+        of Christ in wettest way possible by hitching a ride in a barrel. Unfortunately,
+        your new personal galley is much, much slower and you arrive much, much later
+        than anticipated. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[2].option2EndTxt
+      value: "You resign yourself to finding a new road in the bright, verdant and
+        awfully tiring forest surround you. After hours of getting lost, being sting
+        seemingly by every single insect on God\u2019s green Earth and smashing your
+        foot in a tree stump you swear just appeared there to trip you, you start
+        to wonder if the forest has mind of its own and hates you. After finally
+        stumbling your way to the civilization, you swear to yourself to return to
+        this forest one day to burn to whole damn place down. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Changes.Array.data[0].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Changes.Array.data[0].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Changes.Array.data[0].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Changes.Array.data[0].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.data[1].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Changes.Array.data[0].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[1].option2Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.data[1].amount
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: waterEvents.Array.data[1].option2Changes.Array.data[0].amount
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_LocalPosition.x

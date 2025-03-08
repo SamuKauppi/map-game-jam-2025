@@ -330,12 +330,120 @@ PrefabInstance:
       value: GameMaster
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: landEvents.Array.data[1].amount1
-      value: 300
+      propertyPath: waterEvents.Array.data[1].gameOverText
+      value: "The touch of ocean is calm and gentle. You sink below waves, the sinking
+        ship slowly fading away. You\u2019re too tired to swim against current anymore.
+        No more mud in boots. No more nights huddled in cold wilds. No more goddamned
+        letters. Just, deep, eternal blue."
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: landEvents.Array.data[1].amount2
-      value: 100
+      propertyPath: waterEvents.Array.data[1].option2EndTxt
+      value: "This ship is a coffin, floating down River Styx! You must get out,
+        even if means swimming for your life. Diving into the dark waters, the cold
+        hits you, but you\u2019re almost glad about it: if you\u2019re cold, that
+        means you\u2019re not in Hell yet. You sputter and splash, desperate to keep
+        above the water. When you get to land, you sputter a small lake worth of
+        water out if your lungs. But at least you survived. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[1].option2Changes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Changes.Array.data[0].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Changes.Array.data[0].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Changes.Array.data[0].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Changes.Array.data[0].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.data[1].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Changes.Array.data[0].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option2Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].option2Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[2].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[2].option2Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[0].option1Changes.Array.data[1].amount
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[1].option1Changes.Array.data[0].amount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: waterEvents.Array.data[1].option2Changes.Array.data[0].amount
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5328058787308515081, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_LocalPosition.x
