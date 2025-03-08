@@ -27,9 +27,7 @@ public class GameOverManager : MonoBehaviour
             if (PlayerStats.Instance != null)
             {
                 if (PlayerStats.Instance.Health <= 0 ||
-                    PlayerStats.Instance.GameTime <= 0 ||
-                    PlayerStats.Instance.HorseStamina <= 0 ||
-                    PlayerStats.Instance.Money <= 0)
+                    PlayerStats.Instance.GameTime <= 0)
                 {
                     TriggerGameOver();
                     yield break;
@@ -43,5 +41,6 @@ public class GameOverManager : MonoBehaviour
     {
         Debug.Log("Game Over!");
         Time.timeScale = 0f; // Pause the game
+        EventManager.Instance.ShowEndGame();
     }
 }

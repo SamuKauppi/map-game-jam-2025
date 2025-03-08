@@ -86,25 +86,21 @@ public class PlayerStats : MonoBehaviour
     {
         health -= damage;
         UiManager.Instance.UpdateHealthUI(health);
+        if(health <= 0)
+        {
+            EventManager.Instance.ShowEndGame();
+        }
     }
 
     public void HorseTired(int HorseStaminaMinus)
     {
         horseStamina -= HorseStaminaMinus;
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
-        if (horseStamina <= 0)
-        {
-            GameOverManager.Instance.TriggerGameOver();
-        }
     }
 
     public void LoseMoney(int amount)
     {
         money -= amount;
-        if (money <= 0)
-        {
-            GameOverManager.Instance.TriggerGameOver();
-        }
     }
 
     public void TakeTime(int TakenTime)
@@ -113,7 +109,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateTimeUI(time);
         if (time <= 0)
         {
-            GameOverManager.Instance.TriggerGameOver();
+            EventManager.Instance.ShowEndGame();
         }
     }
 

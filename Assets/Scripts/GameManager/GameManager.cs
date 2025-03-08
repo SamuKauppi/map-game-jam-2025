@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private RoutePoint[] endPoints;
     [SerializeField] private Transform questPointer;
+    [SerializeField] private GameObject tutorialCanvas;
     [SerializeField] private GameObject destinationCanvas;
     [SerializeField] private RoutePoint turku;
 
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         destinationCanvas.SetActive(false);
+        tutorialCanvas.SetActive(true);
         ChooseNewDestination();
     }
 
@@ -39,7 +41,6 @@ public class GameManager : MonoBehaviour
         {
             if (progress == 0)
             {
-                progress++;
                 destinationCanvas.SetActive(true);
                 currentTarget = turku;
                 questPointer.transform.position = currentTarget.transform.position;
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Game won");
             }
+            progress++;
         }
     }
 }

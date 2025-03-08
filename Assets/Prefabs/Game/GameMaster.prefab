@@ -1129,6 +1129,7 @@ MonoBehaviour:
   - {fileID: 3400831023771566692}
   - {fileID: 5508498663433275830}
   questPointer: {fileID: 3966160451867388119}
+  tutorialCanvas: {fileID: 6229182341898242773}
   destinationCanvas: {fileID: 1708959437588799916}
   turku: {fileID: 8296277566535536275}
 --- !u!1 &3279117618988524846
@@ -1913,7 +1914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &633252496933118500
 RectTransform:
   m_ObjectHideFlags: 0

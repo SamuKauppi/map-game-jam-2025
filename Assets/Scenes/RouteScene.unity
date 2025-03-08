@@ -283,11 +283,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 612818450038450768, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2954326144919854596, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_Name
       value: GameMaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].amount1
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].amount2
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5328058787308515081, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -327,6 +335,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5328058787308515081, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5929042315782983353, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

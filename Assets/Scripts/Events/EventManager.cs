@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
@@ -13,12 +14,15 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] private GameObject popUpWindow;
     [SerializeField] private GameObject popUpOptions;
+    [SerializeField] private GameObject quitScreen;
+
     [SerializeField] private Image popup_img;
     [SerializeField] private TMP_Text popup_txt;
     [SerializeField] private TMP_Text choice1_txt;
     [SerializeField] private TMP_Text choice2_txt;
 
     [SerializeField] private GameObject closeOptions;
+    [SerializeField] private Sprite gameOverSprite;
 
     private Event currentEvent;
 
@@ -35,6 +39,7 @@ public class EventManager : MonoBehaviour
         popUpWindow.SetActive(false);
         closeOptions.SetActive(false);
         popUpOptions.SetActive(false);
+        quitScreen.SetActive(false);
     }
 
     private void Update()
@@ -109,5 +114,21 @@ public class EventManager : MonoBehaviour
         popUpOptions.SetActive(false);
         closeOptions.SetActive(false);
         PlayerStats.Instance.IsPausedForEvent = false;
+    }
+
+    public void ShowEndGame()
+    {
+        if(currentEvent == null) return;
+        popUpWindow.SetActive(true);
+        closeOptions.SetActive(false);
+        popUpOptions.SetActive(false);
+        quitScreen.SetActive(true);
+        popup_txt.text = currentEvent.gameOverText;
+        popup_img.sprite = gameOverSprite;
+    }
+
+    public void QuitToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
