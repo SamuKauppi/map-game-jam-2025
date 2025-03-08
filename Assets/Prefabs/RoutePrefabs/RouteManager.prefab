@@ -162,6 +162,53 @@ MonoBehaviour:
   - {fileID: 7339351986942428194}
   - {fileID: 5698239115871885842}
   - {fileID: 3868931820526639357}
+  stopEvents:
+  - type: 0
+    eventSprite: {fileID: 0}
+    eventText: 'You approach a stop and a kind man welcomes you.
+
+      "Welcome!
+      Feel free to have a rest."'
+    option1Effects:
+    - type: 0
+      amount: -10
+    option1Txt: Yes, please!
+    option1EndTxt: You have a comfortable rest...
+    option2Effects:
+    - type: 1
+      amount: -10
+    option2Txt: My horse needs rest more than me!
+    option2EndTxt: The kind man feeds your horse...
+    gameOverText: 
+  - type: 0
+    eventSprite: {fileID: 0}
+    eventText: 'You approach a stop and old crooked woman waits you.
+
+      "Hello~
+      Care for an apple?"'
+    option1Effects:
+    - type: 0
+      amount: 50
+    - type: 3
+      amount: -1
+    option1Txt: Yes, please!
+    option1EndTxt: 'You eat the disgusting looking apple...
+
+      Time seems to
+      wind around you...'
+    option2Effects:
+    - type: 1
+      amount: 10
+    - type: 0
+      amount: -50
+    - type: 3
+      amount: -5
+    option2Txt: My horse needs the apple more!
+    option2EndTxt: 'You force the digusting apple to your horse and the horse feels
+      ill.
+
+      Time seems to wind around you...'
+    gameOverText: 
 --- !u!1 &2608754292798079027
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,6 +1035,10 @@ PrefabInstance:
       propertyPath: playerMovePath.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8244505271952952244, guid: 8ecc3e9f9c906dd42be522413d44d5ee, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: baf715639a242154d908f3ce23b010be, type: 3}
     - target: {fileID: 8370324252214069151, guid: 8ecc3e9f9c906dd42be522413d44d5ee, type: 3}
       propertyPath: m_Icon
       value: 
@@ -995,6 +1046,14 @@ PrefabInstance:
     - target: {fileID: 8386953150162818280, guid: 8ecc3e9f9c906dd42be522413d44d5ee, type: 3}
       propertyPath: m_Icon
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508913536977862276, guid: 8ecc3e9f9c906dd42be522413d44d5ee, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508913536977862276, guid: 8ecc3e9f9c906dd42be522413d44d5ee, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8511573978978517878, guid: 8ecc3e9f9c906dd42be522413d44d5ee, type: 3}
       propertyPath: playerMovePath.Array.data[1]
@@ -2446,6 +2505,14 @@ PrefabInstance:
     - target: {fileID: 8464919268647661149, guid: 16529f99e6535b34f9a54e47c137c644, type: 3}
       propertyPath: m_Points.m_Paths.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464919268647661149, guid: 16529f99e6535b34f9a54e47c137c644, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464919268647661149, guid: 16529f99e6535b34f9a54e47c137c644, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8464919268647661149, guid: 16529f99e6535b34f9a54e47c137c644, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.size

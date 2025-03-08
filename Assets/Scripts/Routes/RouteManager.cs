@@ -9,6 +9,8 @@ public class RouteManager : MonoBehaviour
     [SerializeField] private RoutePoint[] routePoints;
     [SerializeField] private Route[] routes;
 
+    [SerializeField] private Event[] stopEvents;
+
     private RoutePoint currentPoint;
     private Route currentRoute;
 
@@ -72,5 +74,10 @@ public class RouteManager : MonoBehaviour
         currentRoute.ChangeAlpha(0.5f);
         ShowCurrentRoads();
         GameManager.Instance.ReachedDestination(currentPoint);
+
+        if (currentPoint.IsAStop)
+        {
+            EventManager.Instance.ActivateEvent(stopEvents[Random.Range(0, stopEvents.Length)]);
+        }
     }
 }

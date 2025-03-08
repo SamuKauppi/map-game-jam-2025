@@ -10,15 +10,13 @@ public class Event
     [TextArea(3, 15)]
     public string eventText;
 
-    public StatType option1;
-    public int amount1;
+    public StatChange[] option1Effects;
     [TextArea(1, 10)]
     public string option1Txt;
     [TextArea(3, 15)]
     public string option1EndTxt;
 
-    public StatType option2;
-    public int amount2;
+    public StatChange[] option2Effects;
     [TextArea(1, 10)]
     public string option2Txt;
     [TextArea(3, 15)]
@@ -34,4 +32,11 @@ public enum StatType
     Stamina,
     Money,
     Time
+}
+
+[System.Serializable]
+public class StatChange
+{
+    public StatType type;
+    public int amount;
 }

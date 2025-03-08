@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EventManager : MonoBehaviour
@@ -43,11 +42,6 @@ public class EventManager : MonoBehaviour
         quitScreen.SetActive(false);
     }
 
-    private void Update()
-    {
-
-    }
-
     private void HandleStatChange(StatType type, int amount)
     {
         switch (type)
@@ -87,6 +81,16 @@ public class EventManager : MonoBehaviour
         if (currentEvent == null)
             return false;
 
+        ActivateEvent();
+
+        return true;
+    }
+
+    public void ActivateEvent(Event newEvent = null)
+    {
+        if (newEvent != null)
+            currentEvent = newEvent;
+
         popUpWindow.SetActive(true);
         popUpOptions.SetActive(true);
         closeOptions.SetActive(false);
@@ -95,8 +99,6 @@ public class EventManager : MonoBehaviour
         popup_txt.text = currentEvent.eventText;
         choice1_txt.text = currentEvent.option1Txt;
         choice2_txt.text = currentEvent.option2Txt;
-
-        return true;
     }
 
     public void CloseEvent(int choice)
@@ -105,7 +107,14 @@ public class EventManager : MonoBehaviour
         closeOptions.SetActive(true);
         popup_txt.text = choice == 0 ? currentEvent.option1EndTxt : currentEvent.option2EndTxt;
         popup_img.sprite = currentEvent.eventSprite;
-        HandleStatChange(choice == 0 ? currentEvent.option1 : currentEvent.option2, choice == 0 ? currentEvent.amount1 : currentEvent.amount2);
+
+        StatChange[] changes = choice == 0 ? currentEvent.option1Effects : currentEvent.option2Effects;
+
+        foreach (StatChange change in changes)
+        {
+            HandleStatChange(change.type, change.amount);
+        }
+
         currentEvent = null;
     }
 
