@@ -50,6 +50,10 @@ MonoBehaviour:
   horseStamina: 10
   money: 100
   moveSpeed: 2
+  weather: 0
+  staminaDifficultyScale: 5
+  timeDifficultyScale: 0.1
+  horseisTiredMultipier: 3
 --- !u!1 &7477811377047575312
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,8 +81,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.085, y: 0.085, z: 0.085}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3224721579816547410}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

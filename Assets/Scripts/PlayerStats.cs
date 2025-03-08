@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -7,14 +8,17 @@ public class PlayerStats : MonoBehaviour
     public bool IsPausedForEvent { get; set; } = false;
 
     [SerializeField] private int health = 100;
-    [SerializeField] private int time = 10;
-    [SerializeField] private int horseStamina = 10;
-    [SerializeField] private int money = 100;
+    [SerializeField] private float time = 10;
+    [SerializeField] private int horseStamina = 100;
+    [SerializeField] private int money = 300;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private bool weather = false;
+    [SerializeField] private float staminaDifficultyScale = 5f;
+    [SerializeField] private float timeDifficultyScale = 0.1f;
+    [SerializeField] private float horseisTiredMultipier = 3f;
 
     public int Health => health;
-    public int GameTime => time;
+    public float GameTime => time;
     public int HorseStamina => horseStamina;
     public int Money => money;
 
@@ -34,7 +38,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHealthUI(health);
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         UiManager.Instance.UpdateMoneyUI(money);
-        UiManager.Instance.UpdateTimeUI(time);
+        UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         UiManager.Instance.UpdateWeatherUI(weather);
     }
 
@@ -79,12 +83,39 @@ public class PlayerStats : MonoBehaviour
         transform.position = points[^1].position;
         RouteManager.Instance.CompletedMovement();
     }
-
+    public bool IsPlayerDead()
+    {
+        return health <= 0 || time <= 0;
+    }
 
     public void DoDamage(int damage)
     {
         health -= damage;
         UiManager.Instance.UpdateHealthUI(health);
+        Debug.Log("Health lost: " + damage);
+    }
+
+    public void HorseTired(int HorseStaminaMinus)
+    {
+        horseStamina -= HorseStaminaMinus;
+        if (horseStamina <= 0)
+            horseStamina = 0;
+        UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
+        Debug.Log("Stamina used: " + HorseStaminaMinus);
+    }
+
+    public void LoseMoney(int amount)
+    {
+        money -= amount;
+        UiManager.Instance.UpdateMoneyUI(money);
+        Debug.Log("Lost money: " + amount);
+    }
+
+    public void TakeTime(float TakenTime)
+    {
+        time -= TakenTime;
+        UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
+        Debug.Log("Time taken: " + TakenTime);
     }
 
     public void SetPlayerPos(Vector2 newLocation)
@@ -93,35 +124,47 @@ public class PlayerStats : MonoBehaviour
     }
     public void PlayerMove(Transform[] moveRoute, RouteType type)
     {
+        MovingStaminaAndTimeDecrease(moveRoute[0], moveRoute[moveRoute.Length - 1], type);
+        StormManager.Instance.CheckStorm();
         StartCoroutine(MoveBetweenPoints(moveRoute, type));
     }
 
-    public void TakeTime(int TakenTime)
+    private void MovingStaminaAndTimeDecrease(Transform startPos, Transform endPos, RouteType type)
     {
-        time -= TakenTime;
-        UiManager.Instance.UpdateTimeUI(time);
-        if (time <= 0)
+        float distance = Vector2.Distance(startPos.position, endPos.position);
+
+        float time = distance * RouteMultiplier(type) * timeDifficultyScale;
+        float stamina = distance * staminaDifficultyScale * RouteMultiplier(type);
+
+
+        if (type == RouteType.Road || type == RouteType.Offroad)
         {
-            GameOverManager.Instance.TriggerGameOver();
+            HorseTired(Mathf.RoundToInt(stamina));
+
+            if (horseStamina == 0)
+            {
+                time *= horseisTiredMultipier;
+            }
         }
+        if ((type == RouteType.Ship || type == RouteType.Boat) && StormManager.Instance.isStorm)
+        {
+            HorseTired(Mathf.RoundToInt(stamina));
+            time *= StormManager.Instance.stormMultiplier;
+            DoDamage(StormManager.Instance.stormDamage);
+        }
+
+        TakeTime(time);
     }
 
-    public void HorseTired(int HorseStaminaMinus)
+    private float RouteMultiplier(RouteType type)
     {
-        horseStamina -= HorseStaminaMinus;
-        UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
-        if (horseStamina <= 0)
+        switch (type)
         {
-            GameOverManager.Instance.TriggerGameOver();
-        }
-    }
-
-    public void LoseMoney(int amount)
-    {
-        money -= amount;
-        if (money <= 0)
-        {
-            GameOverManager.Instance.TriggerGameOver();
+            case RouteType.Road: return 1f;
+            case RouteType.Offroad: return 2f;
+            case RouteType.Boat: return 0.75f;
+            case RouteType.Ship: return 0.5f;
+            default: return 1f;
         }
     }
 

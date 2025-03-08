@@ -15,12 +15,16 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] private GameObject popUpWindow;
     [SerializeField] private GameObject popUpOptions;
+    [SerializeField] private GameObject quitScreen;
+
     [SerializeField] private Image popup_img;
     [SerializeField] private TMP_Text popup_txt;
     [SerializeField] private TMP_Text choice1_txt;
     [SerializeField] private TMP_Text choice2_txt;
 
     [SerializeField] private GameObject closeOptions;
+    [SerializeField] private Sprite gameOverSprite;
+    [SerializeField] private Sprite gameOverSprite2;
 
     private Event currentEvent;
 
@@ -37,11 +41,7 @@ public class EventManager : MonoBehaviour
         popUpWindow.SetActive(false);
         closeOptions.SetActive(false);
         popUpOptions.SetActive(false);
-    }
-
-    private void Update()
-    {
-        
+        quitScreen.SetActive(false);
     }
 
     private void HandleStatChange(List<StatChange> changes)
@@ -90,19 +90,27 @@ public class EventManager : MonoBehaviour
 
         // Return if the event wont happen.
         if (roll > eventChance)
-        {
             return false;
-        }
 
-        if (rType == RouteType.Road || rType == RouteType.Offroad)
+        if ((rType == RouteType.Road || rType == RouteType.Offroad) && landEvents.Length != 0)
             currentEvent = landEvents[roll % landEvents.Length];
 
-        else
+        else if ((rType == RouteType.Boat || rType == RouteType.Ship) && waterEvents.Length != 0)
             currentEvent = waterEvents[roll % waterEvents.Length];
 
 
         if (currentEvent == null)
             return false;
+
+        ActivateEvent();
+
+        return true;
+    }
+
+    public void ActivateEvent(Event newEvent = null)
+    {
+        if (newEvent != null)
+            currentEvent = newEvent;
 
         popUpWindow.SetActive(true);
         popUpOptions.SetActive(true);
@@ -112,7 +120,6 @@ public class EventManager : MonoBehaviour
         popup_txt.text = currentEvent.eventText;
         choice1_txt.text = currentEvent.option1Txt;
         choice2_txt.text = currentEvent.option2Txt;
-        return true;
     }
 
     public void CloseEvent(int choice)
@@ -136,6 +143,15 @@ public class EventManager : MonoBehaviour
         }
 
         popup_img.sprite = currentEvent.eventSprite;
+
+        StatChange[] changes = choice == 0 ? currentEvent.option1Effects : currentEvent.option2Effects;
+
+        foreach (StatChange change in changes)
+        {
+            HandleStatChange(change.type, change.amount);
+        }
+
+        currentEvent = null;
     }
 
     public void StopEvent()
@@ -144,5 +160,26 @@ public class EventManager : MonoBehaviour
         popUpOptions.SetActive(false);
         closeOptions.SetActive(false);
         PlayerStats.Instance.IsPausedForEvent = false;
+    }
+
+    public void ShowEndGame(string loseType)
+    {
+        if (currentEvent == null) return;
+
+        popUpWindow.SetActive(true);
+        closeOptions.SetActive(false);
+        popUpOptions.SetActive(false);
+        quitScreen.SetActive(true);
+        popup_txt.text = currentEvent.gameOverText;
+
+        if (loseType == "time")
+            popup_img.sprite = gameOverSprite;
+        else
+            popup_img.sprite = gameOverSprite2;
+    }
+
+    public void QuitToMainMenu()
+    {
+        SceneLoader.Instance.LoadScene(SceneType.Lose);
     }
 }

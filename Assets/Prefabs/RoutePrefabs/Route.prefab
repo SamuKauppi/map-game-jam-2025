@@ -112,15 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  hazardType: 0
   spriteRend: {fileID: 8144347760697465709}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
-  playerMovePath:
-  - {fileID: 1627090690830568409}
-  - {fileID: 1345139014735082012}
-  - {fileID: 357709099314005540}
-  moveTime: 5
 --- !u!212 &8144347760697465709
 SpriteRenderer:
   m_ObjectHideFlags: 0
