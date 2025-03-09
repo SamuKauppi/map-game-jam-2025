@@ -47,7 +47,7 @@ public class EventManager : MonoBehaviour
         switch (type)
         {
             case StatType.Health:
-                PlayerStats.Instance.DoDamage(amount);
+                PlayerStats.Instance.DoDamage(amount, currentEvent);
                 break;
             case StatType.Stamina:
                 PlayerStats.Instance.HorseTired(amount);
@@ -124,22 +124,6 @@ public class EventManager : MonoBehaviour
         popUpOptions.SetActive(false);
         closeOptions.SetActive(false);
         PlayerStats.Instance.IsPausedForEvent = false;
-    }
-
-    public void ShowEndGame(string loseType)
-    {
-        if (currentEvent == null) return;
-
-        popUpWindow.SetActive(true);
-        closeOptions.SetActive(false);
-        popUpOptions.SetActive(false);
-        quitScreen.SetActive(true);
-        popup_txt.text = currentEvent.gameOverText;
-
-        if (loseType == "time")
-            popup_img.sprite = gameOverSprite;
-        else
-            popup_img.sprite = gameOverSprite2;
     }
 
     public void QuitToMainMenu()

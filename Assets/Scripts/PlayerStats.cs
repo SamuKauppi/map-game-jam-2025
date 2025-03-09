@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -16,6 +15,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float staminaDifficultyScale = 5f;
     [SerializeField] private float timeDifficultyScale = 0.1f;
     [SerializeField] private float horseisTiredMultipier = 3f;
+    [SerializeField] private Event deathByStormEvent;
+    [SerializeField] private Event deathByTime;
 
     public int Health => health;
     public float GameTime => time;
@@ -88,11 +89,17 @@ public class PlayerStats : MonoBehaviour
         return health <= 0 || time <= 0;
     }
 
-    public void DoDamage(int damage)
+    public void DoDamage(int damage, Event deathEvent)
     {
         health -= damage;
         UiManager.Instance.UpdateHealthUI(health);
         Debug.Log("Health lost: " + damage);
+
+
+        if (health <= 0)
+        {
+            SceneLoader.Instance.UpdateDeathConditions(deathEvent.gameOverText, deathEvent.gameOverSprite);
+        }
     }
 
     public void HorseTired(int HorseStaminaMinus)
@@ -116,6 +123,11 @@ public class PlayerStats : MonoBehaviour
         time -= TakenTime;
         UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         Debug.Log("Time taken: " + TakenTime);
+
+        if (time <= 0)
+        {
+            SceneLoader.Instance.UpdateDeathConditions(deathByTime.gameOverText, deathByTime.gameOverSprite);
+        }
     }
 
     public void SetPlayerPos(Vector2 newLocation)
@@ -150,7 +162,7 @@ public class PlayerStats : MonoBehaviour
         {
             HorseTired(Mathf.RoundToInt(stamina));
             time *= StormManager.Instance.stormMultiplier;
-            DoDamage(Mathf.RoundToInt(health));
+            DoDamage(Mathf.RoundToInt(health), deathByStormEvent);
         }
 
         TakeTime(time);
