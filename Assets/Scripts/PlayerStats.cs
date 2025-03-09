@@ -19,6 +19,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private Event deathByTime;
     [SerializeField] private Event deathByDebt;
 
+    private int maxHealth;
+    private int maxStamina;
+
     public int Health => health;
     public float GameTime => time;
     public int HorseStamina => horseStamina;
@@ -42,6 +45,8 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateMoneyUI(money);
         UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         UiManager.Instance.UpdateWeatherUI(weather);
+        maxHealth = health;
+        maxStamina = horseStamina;
     }
 
     private IEnumerator MoveBetweenPoints(Transform[] points, RouteType routeType)
@@ -96,6 +101,9 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHealthUI(health);
         Debug.Log("Health lost: " + damage);
 
+        if (health >= maxHealth)
+            health = maxHealth;
+
         if (health <= 0)
         {
             SceneLoader.Instance.UpdateDeathConditions(deathEvent.gameOverText, deathEvent.gameOverSprite);
@@ -107,6 +115,9 @@ public class PlayerStats : MonoBehaviour
         horseStamina -= HorseStaminaMinus;
         if (horseStamina <= 0)
             horseStamina = 0;
+        else if(horseStamina >= maxStamina)
+            horseStamina = maxStamina;
+
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         Debug.Log("Stamina used: " + HorseStaminaMinus);
     }
