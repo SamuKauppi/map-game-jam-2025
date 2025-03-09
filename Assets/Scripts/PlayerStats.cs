@@ -117,6 +117,10 @@ public class PlayerStats : MonoBehaviour
         money -= amount;
         UiManager.Instance.UpdateMoneyUI(money);
         Debug.Log("Lost money: " + amount);
+        if (money <= 0)
+        {
+            SceneLoader.Instance.UpdateDeathConditions(deathByDebt.gameOverText, deathByDebt.gameOverSprite);
+        }
     }
 
     public void TakeTime(float TakenTime)

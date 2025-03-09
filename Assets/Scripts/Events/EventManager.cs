@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,6 +45,7 @@ public class EventManager : MonoBehaviour
 
     private void HandleStatChange(StatType type, int amount)
     {
+        StatGainVisual.Instance.StartStatChangeAnimation(amount, type.ToString());
         switch (type)
         {
             case StatType.Health:
