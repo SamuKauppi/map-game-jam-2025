@@ -96,7 +96,6 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHealthUI(health);
         Debug.Log("Health lost: " + damage);
 
-
         if (health <= 0)
         {
             SceneLoader.Instance.UpdateDeathConditions(deathEvent.gameOverText, deathEvent.gameOverSprite);
