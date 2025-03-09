@@ -2583,35 +2583,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].option1Txt
-      value: Run Away!
+      value: Run Away! (-1h)(-20stm)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].option2Txt
-      value: 'Stand your ground!  '
+      value: Stand your ground!  (-20hp)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[1].option1Txt
-      value: Pay the toll
+      value: Pay the toll (-100G)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[1].option2Txt
-      value: "Defend your mails honour\r"
+      value: "Defend your mails honour (-30hp)\r"
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[2].option1Txt
-      value: No sane man would take step into that!
+      value: No sane man would take step into that! (-2h)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[2].option2Txt
-      value: "Neither rain nor snow nor glom\u2026\r"
+      value: "Neither rain nor snow nor glom\u2026 (-30hp)\r"
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[3].option1Txt
-      value: Put the nag to work
+      value: Put the nag to work (-20stm)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[3].option2Txt
-      value: "Wander into the green maze\r"
+      value: "Wander into the green maze (-1h)\r"
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].eventText
@@ -2654,15 +2654,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6a22272f999f6fd4da49efd4caa66850, type: 3}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option1Txt
-      value: Try to get into a lifeboat
+      value: Try to get into a lifeboat (-2h)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option2Txt
-      value: Swim for it!
+      value: Swim for it! (20hp)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[1].option1Txt
-      value: Dive into the waves
+      value: Dive into the waves (-20hp)(+100G)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[1].option2Txt
@@ -2670,11 +2670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[2].option1Txt
-      value: Stay on Theseus
+      value: Stay on Theseus (-2h)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[2].option2Txt
-      value: Take off on Ariadne
+      value: Take off on Ariadne (-50G)
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].gameOverText
@@ -2803,7 +2803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[2].gameOverText
-      value: you died
+      value: You waited too long :(
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option1EndTxt
@@ -2871,7 +2871,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e960cfe6d9e682c4192ec16ef81c790f, type: 3}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].option1Effects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].option2Effects.Array.size
@@ -2926,6 +2926,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Effects.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[1].option1Effects.Array.data[0].type
       value: 2
       objectReference: {fileID: 0}
@@ -2943,7 +2947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option1Effects.Array.data[0].type
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option2Effects.Array.data[0].type
@@ -2964,6 +2968,10 @@ PrefabInstance:
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].option1Effects.Array.data[0].amount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[0].option1Effects.Array.data[1].amount
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: landEvents.Array.data[0].option2Effects.Array.data[0].amount
@@ -2995,7 +3003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option1Effects.Array.data[0].amount
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[0].option2Effects.Array.data[0].amount
@@ -3007,11 +3015,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[1].option1Effects.Array.data[1].amount
-      value: 50
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[2].option1Effects.Array.data[0].amount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: waterEvents.Array.data[2].option2Effects.Array.data[0].amount
@@ -3154,6 +3162,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: stopEvents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: stopEvents.Array.data[0].type
       value: 4
       objectReference: {fileID: 0}
@@ -3166,11 +3178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: stopEvents.Array.data[0].option1Txt
-      value: Bed
+      value: Bed (+50hp)(-30G)
       objectReference: {fileID: 0}
     - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: stopEvents.Array.data[0].option2Txt
-      value: Horse
+      value: Horse (+100stm)(-40G)
       objectReference: {fileID: 0}
     - target: {fileID: 6230145121822352351, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: stopEvents.Array.data[0].eventSprite
