@@ -75,6 +75,12 @@ public class RouteManager : MonoBehaviour
         ShowCurrentRoads();
         GameManager.Instance.ReachedDestination(currentPoint);
 
+        if (!StormManager.Instance.isStorm)
+        {
+            UiManager.Instance.UpdateWeatherUI(false);
+            Debug.Log("Storm Ended");
+        }
+
         if (currentPoint.IsAStop)
         {
             EventManager.Instance.ActivateEvent(stopEvents[Random.Range(0, stopEvents.Length)]);

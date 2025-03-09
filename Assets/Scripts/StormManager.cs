@@ -50,13 +50,6 @@ public class StormManager : MonoBehaviour
         float timeFromStart = stormStart - PlayerStats.Instance.GameTime;
         Debug.Log("Storm has been raging on for: " + timeFromStart + " hours.");
         if ((timeFromStart) > stormDuration )
-            EndStorm();
-    }
-
-    private void EndStorm()
-    {
-        isStorm = false;
-        UiManager.Instance.UpdateWeatherUI(false);
-        Debug.Log("Storm Ended");
+            isStorm = false;
     }
 }

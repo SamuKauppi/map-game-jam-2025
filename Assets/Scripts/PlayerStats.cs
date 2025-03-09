@@ -151,8 +151,8 @@ public class PlayerStats : MonoBehaviour
     }
     public void PlayerMove(Transform[] moveRoute, RouteType type)
     {
-        MovingStaminaAndTimeDecrease(moveRoute[0], moveRoute[moveRoute.Length - 1], type);
         StormManager.Instance.CheckStorm();
+        MovingStaminaAndTimeDecrease(moveRoute[0], moveRoute[moveRoute.Length - 1], type);
         StartCoroutine(MoveBetweenPoints(moveRoute, type));
     }
 
