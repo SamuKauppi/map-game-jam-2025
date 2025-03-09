@@ -68,6 +68,7 @@ public class StatGainVisual : MonoBehaviour
         // Start animation
         StartCoroutine(AnimateTextObj(newTextObj, type, middlePos.position + (new Vector3(0, 50f, 0) * count)));
         count++;
+        Debug.Log("s");
     }
 
     private IEnumerator AnimateTextObj(TMP_Text obj, string type, Vector3 startPos)

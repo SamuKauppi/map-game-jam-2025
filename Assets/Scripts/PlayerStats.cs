@@ -44,7 +44,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHealthUI(health);
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         UiManager.Instance.UpdateMoneyUI(money);
-        UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
+        UiManager.Instance.UpdateTimeUI(Mathf.FloorToInt(time));
         UiManager.Instance.UpdateWeatherUI(weather, 0);
         maxHealth = health;
         maxStamina = horseStamina;

@@ -51,7 +51,7 @@ public class StormManager : MonoBehaviour
     {
         timeFromStart = stormStart - PlayerStats.Instance.GameTime;
         leftOfStorm = stormStart - timeFromStart;
-        UiManager.Instance.UpdateWeatherUI(true, Mathf.RoundToInt(leftOfStorm));
+        UiManager.Instance.UpdateWeatherUI(true, Mathf.FloorToInt(leftOfStorm));
         Debug.Log("Storm has been raging on for: " + timeFromStart + " hours.");
         if ((timeFromStart) > stormDuration )
             isStorm = false;
