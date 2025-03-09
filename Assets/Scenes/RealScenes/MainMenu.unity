@@ -742,8 +742,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 419, y: 96}
-  m_SizeDelta: {x: 761.6511, y: 142.8096}
+  m_AnchoredPosition: {x: 440, y: 229}
+  m_SizeDelta: {x: 1013.3118, y: 528.5065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1772667889
 MonoBehaviour:
@@ -778,7 +778,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Turku Posti
+  m_Text: "Post\n by \nPeasant"
 --- !u!222 &1772667890
 CanvasRenderer:
   m_ObjectHideFlags: 0
