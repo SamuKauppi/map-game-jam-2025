@@ -506,7 +506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 81.20599}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -200, y: -362.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2103877801053278978
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f6a4f1d9828b94b6bae99455c3c06f5f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1365,8 +1365,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4e9e26a084e864f209c1fc7c35401242, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1465,8 +1465,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 52}
-  m_SizeDelta: {x: -66.9376, y: -283.3358}
+  m_AnchoredPosition: {x: 0, y: 60.668518}
+  m_SizeDelta: {x: -225.8602, y: -335.3469}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3298992607832740566
 CanvasRenderer:
@@ -1531,8 +1531,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2023,41 +2023,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &6767308304282654987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7987333779911417182}
-  m_Layer: 5
-  m_Name: StatPos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7987333779911417182
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6767308304282654987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5637511354904921307}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -527, y: 456}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7139214034862903893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,7 +2090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 693296fa15c054bfb94a12e9885dc887, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2135,194 +2100,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &7362601329685255908
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7786370552314230198}
-  - component: {fileID: 7193907623135255606}
-  - component: {fileID: 6814732033513814284}
-  m_Layer: 5
-  m_Name: GainText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7786370552314230198
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7362601329685255908}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5637511354904921307}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 321.0908, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7193907623135255606
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7362601329685255908}
-  m_CullTransparentMesh: 1
---- !u!114 &6814732033513814284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7362601329685255908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Juttu
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &7617020386077342159
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5637511354904921307}
-  - component: {fileID: 2278725555480787180}
-  m_Layer: 5
-  m_Name: StatGainPopUp
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5637511354904921307
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7617020386077342159}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7786370552314230198}
-  - {fileID: 7955969969312175312}
-  - {fileID: 7987333779911417182}
-  m_Father: {fileID: 9205068322972597167}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2278725555480787180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7617020386077342159}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393637fa86504fe42a729b3f4a71b323, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  middlePos: {fileID: 7955969969312175312}
-  statPos: {fileID: 7987333779911417182}
-  gainTextObject: {fileID: 6814732033513814284}
 --- !u!1 &8195048230312174285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,8 +2429,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4e9e26a084e864f209c1fc7c35401242, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2929,41 +2706,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &9020438356792064347
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7955969969312175312}
-  m_Layer: 5
-  m_Name: Middle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7955969969312175312
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9020438356792064347}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5637511354904921307}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9132146771030996519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,559 +2848,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5328058787308515081}
     m_Modifications:
-    - target: {fileID: 1839944571710707295, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2342227167853521252, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_Name
       value: EventManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].type
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].type
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].type
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].amount1
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].amount2
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option2
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].amount1
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].amount2
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option1
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].eventText
-      value: "A horned giant of the forest rushes through the trees, driven mad by
-        hunt. As it runs towards you, you can\u2019t but marvel at its size: like
-        some forgotten god of olden times, strong like ten men and crowned by antlers. 
-        \r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].eventText
-      value: "A group of blackguards, armed with clubs has blocked the route with
-        a tree. \u201CLookie lookie, it\u2019s mighty fine gentleman, riding a pretty
-        horsie. You got some mail for us?\u201D says a man with smile like a wolf
-        and arms like tree trunks.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].eventText
-      value: "Very land you travel on raises against you! Wind howls like ghost of
-        the damned, rain drums against you like tiny daggers, road melts into slurry
-        of mud and stone. Your need to wary: one wrong step and you\u2019ll be sinking
-        into suddenly not-so-firm earth. As the lightning splits the sky in distance,
-        you\u2019re left with choice: venture forth into brownish Hell or bide your
-        time for better weather.\r\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].eventText
-      value: "Its starts with a loud crack, followed by birds flying away. Once mighty
-        maple tree, home to who-knows many generations of squirrels, comes down with
-        a sorrowful thump. Right in the middle of the road you were on. The only
-        road through otherwise untravellable patch of forest you found yourself on.\r\n\r\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1Txt
-      value: Run Away! (-1h)(-20stm)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option2Txt
-      value: Stand your ground!  (-20hp)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option1Txt
-      value: Pay the toll (-100G)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option2Txt
-      value: "Defend your mails honour (-30hp)\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option1Txt
-      value: No sane man would take step into that! (-2h)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option2Txt
-      value: "Neither rain nor snow nor glom\u2026 (-30hp)\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option1Txt
-      value: Put the nag to work (-20stm)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option2Txt
-      value: "Wander into the green maze (-1h)\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].eventText
-      value: "Curse that lazy shipwright who skipped the last round of tarring! The
-        rats were first one to notice, screeching and scrambling out of hull like
-        a storm of filthy fur and small incisors. Then, a big creak and shout from
-        men below the deck: \u201CWe\u2019re sinking! It\u2019s every man for himself!\u201D\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].eventText
-      value: "Young deckhand, hit by low flying seagull splashes into the ice-cold
-        ocean. Spluttering, flailing, he tries his best to keep head above water,
-        not wishing to sink into the deep, freezing blue. \u201CWill somebody help
-        that poor boy!\u201D scream one of the older sailors.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].eventText
-      value: "During your trip through the seaside, the ship you\u2019re traveling
-        on, Theseus needs to make landfall for repairs. Captain is very apologetic,
-        promising you that they will honour the deals made and taking you all the
-        rest of the way, if you just wait for them to replace few parts. But a rival
-        captain offers you a ride on his ship, Ariadne, for just a little bit extra
-        cost.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4738f45dd6db2d34aab0964a9e7ed1c4, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1bb5a8e262e12c94fb82976572267df4, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c529d7988225b7d41811247717b84b9c, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6a22272f999f6fd4da49efd4caa66850, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option1Txt
-      value: Try to get into a lifeboat (-2h)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option2Txt
-      value: Swim for it! (-20hp)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option1Txt
-      value: Dive into the waves (-20hp)(+10G)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option2Txt
-      value: "\u201CWe\u2019d both just sink\u201D (-1h)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option1Txt
-      value: Stay on Theseus (-2h)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option2Txt
-      value: Take off on Ariadne (-50G)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].gameOverText
-      value: 'Before you can react, the maddened beast drives it horns through you.
-        As it rips them away, most of your guts go along with it. Gasping for breath,
-        you fall to the ground, blood soaking into moss. Last thing you see is a
-        stone-like hooves crushing from upwards.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].gameOverText
-      value: "After breaking half your bones, the bandits hang your corpse from a
-        dead tree. Your body, battered and bruised, becomes a feast for local crows,
-        while those papers you gave your life for will be used to wipe beer stains
-        off robber\u2019s face in some godforsaken inn.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].gameOverText
-      value: You DIed
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].gameOverText
-      value: "But those dreams might be too grand, as when you finally get back to
-        Turku, turns out your wander through evergreen was just enough time for Bishop
-        to get very, very cross with you. Maybe staying in forest wouldn\u2019t have
-        been that bad?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 57f7c368d45be7747808b6efa2054701, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f32679848a5aedf408be41dec0a71c4c, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].eventSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fd574ad437b94494caa56aa43be22309, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1EndTxt
-      value: "Even when brave knights roamed the lands, they knew there were beasts
-        fierce enough that turning your tail and fleeing wasn\u2019t just the wisest
-        option: it was the only one. You feel wind on your back as your steps hurry
-        from the antlered monster. While this wisest of choices saved you from confrontation
-        with the dread bovine, it also got you hopelessly lost. Your legs can carry
-        your surprisingly long and fast. Too bad they only seem to work this superbly
-        while running from your life.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option2EndTxt
-      value: "No beast of land, be it size like an insect or a behemoth, shall stand
-        in postman\u2019s way. You steady yourself. ready for what\u2019s come. The
-        creature hits you in its hurry and only by grace of God are you saved from
-        being gored by its heady collection of spears. Your hand is not so lucky:
-        bone bursting from the beast\u2019s head rends your flesh and draw blood.
-        As it disappears into forest, you\u2019re left holding your sorry hand and
-        cursing the being.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option1EndTxt
-      value: "Render unto bandits what\u2019s bandit\u2019s and unto mailmen what\u2019s
-        mailmen\u2019s. You both go your merry way, your burden lessened greatly
-        from corrupting touch of gold and your new acquaintances with spring on their
-        step on way to nearest tavern."
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option2EndTxt
-      value: "Hell hath no fury like a mailman scorned. Clubs are nothing compared
-        to a bag full of letters, heavy as the word of God they contain. Sticks and
-        stones can however still break your bones and while you\u2019re finished
-        with the bandits, you\u2019re bloodied, bruised and you\u2019re not physician
-        but you reckon your fingers should not bend that way.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option1EndTxt
-      value: 'It is madness to try make your way through when nature itself wants
-        you to stop. Instead of trying to push ahead, you hunker down beneath great
-        old pine. The crack of thunder and pitter of raindrops lull you into sleep.
-        When you wake up, you have no idea how much time has passed, but the World
-        seems to be apologizing from its bad mood: flowers bloom fervently after
-        rain, birds chirp in trees and gentle sun warms your back.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option2EndTxt
-      value: "You have letters to deliver. If there\u2019s a road, you take.  If
-        there\u2019s no road, you make it. You are postman, on God (or at least his
-        closest confrere in Finland) given mission to deliver these letters. Should
-        you fail, live could be lost, fortunes be lost and sinners go free on their
-        damned way. You steel yourself, pull your travel cloak tighter around yourself
-        and continue. Nature\u2019s wrath takes toll on you, but at least you don\u2019t
-        lose any time.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option1EndTxt
-      value: "Your proud horse might think itself as finest specimen around: the
-        one that valiantly gallops through the lands, hurrying heroes from places
-        to another, while its lesser elk huff and puff days on end of ploughs and
-        pulling tree stumps. So, it\u2019s a quite a surprise for it when you tie
-        a rope into its saddle and other end to the fallen tree. After some time
-        of sweating and neighs of protests, the tree is out of the way.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option2EndTxt
-      value: "You resign yourself to finding a new road in the bright, verdant and
-        awfully tiring forest surround you. After hours of getting lost, being sting
-        seemingly by every single insect on God\u2019s green Earth and smashing your
-        foot in a tree stump you swear just appeared there to trip you, you start
-        to wonder if the forest has mind of its own and hates you. After finally
-        stumbling your way to the civilization, you swear to yourself to return to
-        this forest one day to burn to whole damn place down.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].gameOverText
-      value: "The touch of ocean is calm and gentle. You sink below waves, the sinking
-        ship slowly fading away. You\u2019re too tired to swim against current anymore.
-        No more mud in boots. No more nights huddled in cold wilds. No more goddamned
-        letters. Just, deep, eternal blue.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].gameOverText
-      value: you died
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].gameOverText
-      value: You waited too long :(
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option1EndTxt
-      value: "Short, mad fight for survival follows as people try to tear of anything
-        that\u2019ll float to save themselves. Men yell, women scream, and children
-        make noise like little animals they are. You avoid being taken into Kingdom
-        of Christ in wettest way possible by hitching a ride in a barrel. Unfortunately,
-        your new personal galley is much, much slower and you arrive much, much later
-        than anticipated.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option2EndTxt
-      value: "This ship is a coffin, floating down River Styx! You must get out,
-        even if means swimming for your life. Diving into the dark waters, the cold
-        hits you, but you\u2019re almost glad about it: if you\u2019re cold, that
-        means you\u2019re not in Hell yet. You sputter and splash, desperate to keep
-        above the water. When you get to land, you sputter a small lake worth of
-        water out if your lungs. But at least you survived.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option1EndTxt
-      value: 'Before your mind even realizes, your body has already hit the water.
-        The shock of cold hits you even harder, but you manage to keep your wits.
-        Before your body stops from icy touch of ocean, you manage to drag yourself
-        and almost numb boy back to the boat. After some warm tea and lots of blankets,
-        the boy thanks you with little coin he has stashed away.
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option2EndTxt
-      value: "\u2026 you tell yourself. \u201CThere must be better swimmer among
-        these men.\u201D With every reason, the boy sinks deeper into the sea, his
-        limbs sway slowly dying down and his screams fading. All you on the board
-        helplessly watch the ocean take boy that wasn\u2019t even a man yet. \u201CNothing
-        I could have done\u201D, you think and turn away. You almost believe yourself.\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option1EndTxt
-      value: "You\u2019re one boat kind of guy, even through storms and reefs. The
-        boat you started on is the boat you will complete your journey. You help
-        yourself replace last few parts and admire your new handiwork: it looks like
-        a brand-new ship! Sadly, these fixes also took some precious time. But at
-        least you don\u2019t have to pay for two ships on one journey\u2026\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option2EndTxt
-      value: "After some grumbling and money changing hands, you climb onboard Ariadne.
-        For some reason, it looks almost exactly like Theseus, down to the smallest
-        part. Actually, it even looks like the hull just has name Theseus faintly
-        painted over with new words! Before you can ponder the meaning of this revelation,
-        you\u2019re already at your destination. \r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].gameOverSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e960cfe6d9e682c4192ec16ef81c790f, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].gameOverSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e960cfe6d9e682c4192ec16ef81c790f, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].gameOverSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e960cfe6d9e682c4192ec16ef81c790f, type: 3}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1Effects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option1Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option1Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option1Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option1Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option1Effects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option1Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option2Effects.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1Effects.Array.data[0].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1Effects.Array.data[1].type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option1Effects.Array.data[0].type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option1Effects.Array.data[0].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option1Effects.Array.data[0].type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option2Effects.Array.data[0].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option1Effects.Array.data[0].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option1Effects.Array.data[1].type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option2Effects.Array.data[0].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option1Effects.Array.data[0].type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option2Effects.Array.data[0].type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1Effects.Array.data[0].amount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option1Effects.Array.data[1].amount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[0].option2Effects.Array.data[0].amount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option1Effects.Array.data[0].amount
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[1].option2Effects.Array.data[0].amount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option1Effects.Array.data[0].amount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[2].option2Effects.Array.data[0].amount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option1Effects.Array.data[0].amount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: landEvents.Array.data[3].option2Effects.Array.data[0].amount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option1Effects.Array.data[0].amount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[0].option2Effects.Array.data[0].amount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option1Effects.Array.data[0].amount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option1Effects.Array.data[1].amount
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[1].option2Effects.Array.data[0].amount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option1Effects.Array.data[0].amount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2786116664741244256, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      propertyPath: waterEvents.Array.data[2].option2Effects.Array.data[0].amount
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4846383812208259766, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+    - target: {fileID: 3908494145167892341, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3702,20 +2898,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7977871834695206816, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5637511354904921307}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
 --- !u!4 &7219980464863934524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
-  m_PrefabInstance: {fileID: 1227759715256204303}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &9205068322972597167 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7977871834695206816, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
   m_PrefabInstance: {fileID: 1227759715256204303}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1269392480820158084
@@ -5420,66 +4608,6 @@ PrefabInstance:
     - target: {fileID: 3641456612098563646, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500526699944709970, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500526699944709970, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 6500526699944709970, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: money
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: horseStamina
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: timeDifficultyScale
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: staminaDifficultyScale
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: deathByDebt.gameOverText
-      value: "Without gold, there\u2019s no food, no bed, no horse. While righteousness
-        might carry one so far, it is not possible to fill belly on righteousness,
-        nor to gallop through fields. As your coin wears out, so does your dedication
-        to the mission. As the hunger gnaws at the bottom of your stomach, those
-        letters seem less and less meaningful. Surely, they would have sent somebody
-        more important if the letters themselves were of such importance? Or at least
-        given him a few more coin for his trouble. You abandon your journey, and
-        the letters go undelivered. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: deathByTime.gameOverText
-      value: "Sands of time shift eternal, each grain heavy enough to crush a man.
-        Before you know, the time appointed to you has run off and with that, the
-        good grace of Bishop. When you finally return, it isn\u2019t fashionably
-        late, unless being thrown to jail with only water and dry bread is in fashion
-        lately. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: deathByDebt.gameOverSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 32a1218f5604c8c469c570fd864a87e9, type: 3}
-    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
-      propertyPath: deathByStormEvent.gameOverText
-      value: "Thundering waves, overwhelming stench of brine, lightnings slashing
-        through sky like Sword of God. Ocean\u2019s wrath is upon you and no man
-        is safe from it\u2019s aquatic grasp. Your ship is like a bark boat in grasp
-        of rowdy children. To your horror, you see how wave, tall as castle wall
-        rises before you. It\u2019s the last thing you see before the tide drags
-        you down to your watery grave. "
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

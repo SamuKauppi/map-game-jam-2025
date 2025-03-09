@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class StatGainVisual : MonoBehaviour
     [SerializeField] private RectTransform middlePos;
     [SerializeField] private RectTransform statPos;
     [SerializeField] private TMP_Text gainTextObject;
+    private static readonly Dictionary<string, int> activeAnimations = new();
 
     private void Awake()
     {
@@ -30,38 +32,48 @@ public class StatGainVisual : MonoBehaviour
     {
         if (gainTextObject == null) return;
 
-        gainTextObject.text = "";
-        gainTextObject.gameObject.SetActive(true);
+        // Check and limit simultaneous animations per type
+        if (!activeAnimations.ContainsKey(type))
+            activeAnimations[type] = 0;
 
+        if (activeAnimations[type] > 0) return; // Prevent overlapping animations of same type
+
+        // Create a new copy
+        TMP_Text newTextObj = Instantiate(gainTextObject, statPos.position, Quaternion.identity, transform);
+        newTextObj.gameObject.SetActive(true);
+
+        // Set color based on type
         switch (type)
         {
             case "Stamina":
-                gainTextObject.color = Color.green;
+                newTextObj.color = Color.green;
                 break;
             case "Time":
-                gainTextObject.color = Color.black;
+                newTextObj.color = Color.black;
                 break;
             case "Health":
-                gainTextObject.color = Color.red;
+                newTextObj.color = Color.red;
                 break;
             case "Money":
-                gainTextObject.color = Color.yellow;
+                newTextObj.color = Color.yellow;
                 break;
             default:
                 break;
         }
 
         amount *= -1;
-        gainTextObject.text = amount > 0 ? "+" + amount + " " + type : amount + " " + type;
+        newTextObj.text = amount > 0 ? "+" + amount + " " + type : amount + " " + type;
 
-        StartCoroutine(AnimateTextObj(gainTextObject));
+        // Start animation
+        StartCoroutine(AnimateTextObj(newTextObj, type));
     }
 
-    private IEnumerator AnimateTextObj(TMP_Text obj)
+    private IEnumerator AnimateTextObj(TMP_Text obj, string type)
     {
+        activeAnimations[type]++; // Track active coroutine
         obj.rectTransform.position = middlePos.position;
 
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(2f + activeAnimations.Count);
 
         float t = 0;
         float transitionTime = 1f;
@@ -73,6 +85,9 @@ public class StatGainVisual : MonoBehaviour
         }
 
         yield return new WaitForSecondsRealtime(0.5f);
-        obj.gameObject.SetActive(false);
+
+        // Clean up
+        Destroy(obj.gameObject);
+        activeAnimations[type]--; // Decrease count after animation ends
     }
 }

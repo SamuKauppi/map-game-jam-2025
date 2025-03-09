@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3641456612098563646}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   time: 10
-  horseStamina: 10
+  horseStamina: 100
   money: 100
   moveSpeed: 2
   weather: 0
@@ -64,7 +64,12 @@ MonoBehaviour:
     option2Effects: []
     option2Txt: 
     option2EndTxt: 
-    gameOverText: You died in a horrible storm!
+    gameOverText: "Thundering waves, overwhelming stench of brine, lightnings slashing
+      through sky like Sword of God. Ocean\u2019s wrath is upon you and no man is
+      safe from it\u2019s aquatic grasp. Your ship is like a bark boat in grasp of
+      rowdy children. To your horror, you see how wave, tall as castle wall rises
+      before you. It\u2019s the last thing you see before the tide drags you down
+      to your watery grave. "
     gameOverSprite: {fileID: 21300000, guid: e960cfe6d9e682c4192ec16ef81c790f, type: 3}
   deathByTime:
     type: 0
@@ -76,7 +81,30 @@ MonoBehaviour:
     option2Effects: []
     option2Txt: 
     option2EndTxt: 
-    gameOverText: You ran out of time...
+    gameOverText: "Sands of time shift eternal, each grain heavy enough to crush
+      a man. Before you know, the time appointed to you has run off and with that,
+      the good grace of Bishop. When you finally return, it isn\u2019t fashionably
+      late, unless being thrown to jail with only water and dry bread is in fashion
+      lately. "
+    gameOverSprite: {fileID: 21300000, guid: 32a1218f5604c8c469c570fd864a87e9, type: 3}
+  deathByDebt:
+    type: 0
+    eventSprite: {fileID: 0}
+    eventText: 
+    option1Effects: []
+    option1Txt: 
+    option1EndTxt: 
+    option2Effects: []
+    option2Txt: 
+    option2EndTxt: 
+    gameOverText: "Without gold, there\u2019s no food, no bed, no horse. While righteousness
+      might carry one so far, it is not possible to fill belly on righteousness,
+      nor to gallop through fields. As your coin wears out, so does your dedication
+      to the mission. As the hunger gnaws at the bottom of your stomach, those letters
+      seem less and less meaningful. Surely, they would have sent somebody more important
+      if the letters themselves were of such importance? Or at least given him a
+      few more coin for his trouble. You abandon your journey, and the letters go
+      undelivered. "
     gameOverSprite: {fileID: 21300000, guid: 32a1218f5604c8c469c570fd864a87e9, type: 3}
 --- !u!1 &7477811377047575312
 GameObject:
@@ -105,7 +133,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.085, y: 0.085, z: 0.085}
+  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3224721579816547410}
