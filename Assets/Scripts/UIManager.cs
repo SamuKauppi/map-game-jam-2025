@@ -32,14 +32,13 @@ public class UiManager : MonoBehaviour
         float t = 0f;
         if (startAmount == 0)
         {
-            t = 2.9f;
+            startAmount = endAmount;
         }
 
         while (t < 3f)
         {
             targetText.text = Mathf.RoundToInt(Mathf.Lerp(startAmount, endAmount, t / 3f)).ToString() + text;
             t += Time.deltaTime;
-            Debug.Log(targetText.text);
             yield return null;
         }
     }
