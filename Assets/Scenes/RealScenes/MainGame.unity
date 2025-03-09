@@ -257,6 +257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9180184390640951563, guid: 36adda3d98e7d904db7a5626ef3a88f5, type: 3}
+      propertyPath: stormDamage
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -341,6 +345,10 @@ PrefabInstance:
     - target: {fileID: 2954326144919854596, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_Name
       value: GameMaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009231353535254895, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
+      propertyPath: landEvents.Array.data[1].option1Txt
+      value: Pay the toll (-30G)
       objectReference: {fileID: 0}
     - target: {fileID: 5328058787308515081, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_LocalPosition.x
