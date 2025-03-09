@@ -590,6 +590,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 282313961490337657, guid: 752a0c0c514431a48984725256503085, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2786116664741244256}
+    - target: {fileID: 432417722629973228, guid: 752a0c0c514431a48984725256503085, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2786116664741244256}
+    - target: {fileID: 3085354774823089019, guid: 752a0c0c514431a48984725256503085, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2786116664741244256}
     - target: {fileID: 3677824330032619996, guid: 752a0c0c514431a48984725256503085, type: 3}
       propertyPath: m_Name
       value: PopUpWindow 1
