@@ -93,7 +93,7 @@ public class PlayerStats : MonoBehaviour
     }
     public bool IsPlayerDead()
     {
-        return health <= 0 || time <= 0;
+        return health <= 0 || time <= 0 || money <= 0;
     }
 
     public void DoDamage(int damage, Event deathEvent)
