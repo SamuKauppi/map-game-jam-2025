@@ -17,6 +17,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float horseisTiredMultipier = 3f;
     [SerializeField] private Event deathByStormEvent;
     [SerializeField] private Event deathByTime;
+    [SerializeField] private Event deathByDebt;
 
     public int Health => health;
     public float GameTime => time;
