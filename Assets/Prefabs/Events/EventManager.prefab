@@ -128,7 +128,7 @@ MonoBehaviour:
     option1Effects:
     - type: 2
       amount: 30
-    option1Txt: Pay the toll (-100G)
+    option1Txt: Pay the toll (-30G)
     option1EndTxt: "Render unto bandits what\u2019s bandit\u2019s and unto mailmen
       what\u2019s mailmen\u2019s. You both go your merry way, your burden lessened
       greatly from corrupting touch of gold and your new acquaintances with spring
