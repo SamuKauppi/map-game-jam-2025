@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isStorm: 0
   stormMultiplier: 2
-  stormDamage: 10
+  stormDamage: 5
