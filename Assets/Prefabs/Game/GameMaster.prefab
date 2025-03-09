@@ -506,7 +506,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 19}
   m_SizeDelta: {x: -200, y: -362.41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2103877801053278978
@@ -543,8 +543,8 @@ MonoBehaviour:
     jobs is to deliver. What it is that he delivers, fortune or folly, is mystery
     even for him. Now, for return to Turku to claim your reward. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59f213169c47040b89b9e6ecb8777f39, type: 2}
+  m_sharedMaterial: {fileID: -6280864782419902469, guid: 59f213169c47040b89b9e6ecb8777f39, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -575,12 +575,12 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -679,8 +679,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 217cd6dd6560a43018485489d51cba42, type: 2}
+  m_sharedMaterial: {fileID: 4332153105519893356, guid: 217cd6dd6560a43018485489d51cba42, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -704,13 +704,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 60
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -782,7 +782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 107, y: 0}
   m_SizeDelta: {x: 1000, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &195392940657585263
@@ -1334,8 +1334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 300, y: 160}
+  m_AnchoredPosition: {x: -16.8433, y: 28}
+  m_SizeDelta: {x: 265, y: 90}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &717187838613671551
 CanvasRenderer:
@@ -1465,7 +1465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25.953583}
+  m_AnchoredPosition: {x: 0, y: 59}
   m_SizeDelta: {x: -225.8602, y: -368.0938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3298992607832740566
@@ -1506,8 +1506,8 @@ MonoBehaviour:
     the map\n- If your horse runs out of stamina, you use more time to travel\n-
     Reach the red dot and come back to Turku to win!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 59f213169c47040b89b9e6ecb8777f39, type: 2}
+  m_sharedMaterial: {fileID: -6280864782419902469, guid: 59f213169c47040b89b9e6ecb8777f39, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1537,13 +1537,13 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -1567,7 +1567,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 5.470825, y: 0, z: 0, w: -82.06314}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1822,8 +1822,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 217cd6dd6560a43018485489d51cba42, type: 2}
+  m_sharedMaterial: {fileID: 4332153105519893356, guid: 217cd6dd6560a43018485489d51cba42, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1847,13 +1847,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 60
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontSizeMax: 60
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2059,8 +2059,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1172.6326, y: 938.1061}
+  m_AnchoredPosition: {x: 171, y: 0}
+  m_SizeDelta: {x: 1092.5127, y: 886.4602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1718964691733789651
 CanvasRenderer:
@@ -2398,8 +2398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 300, y: 160}
+  m_AnchoredPosition: {x: 0, y: 23}
+  m_SizeDelta: {x: 265, y: 90}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2040301466126681976
 CanvasRenderer:
@@ -2848,17 +2848,89 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5328058787308515081}
     m_Modifications:
+    - target: {fileID: 314660188759306622, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 764.7145
+      objectReference: {fileID: 0}
+    - target: {fileID: 314660188759306622, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 770.7054
+      objectReference: {fileID: 0}
+    - target: {fileID: 314660188759306622, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 314660188759306622, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35.705
+      objectReference: {fileID: 0}
     - target: {fileID: 677971702775497896, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 714591859841093586, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 714591859841093586, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -419
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411325490913267155, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411325490913267155, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -168.70541
       objectReference: {fileID: 0}
     - target: {fileID: 2342227167853521252, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_Name
       value: EventManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2994000757636537637, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -356
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994000757636537637, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -419
+      objectReference: {fileID: 0}
     - target: {fileID: 3908494145167892341, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917730547042505196, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_fontSize
+      value: 22.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917730547042505196, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 59f213169c47040b89b9e6ecb8777f39, type: 2}
+    - target: {fileID: 3917730547042505196, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_lineSpacing
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917730547042505196, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6280864782419902469, guid: 59f213169c47040b89b9e6ecb8777f39, type: 2}
+    - target: {fileID: 3917730547042505196, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3917730547042505196, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518275998865624789, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518275998865624789, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -123.93817
       objectReference: {fileID: 0}
     - target: {fileID: 8447456637070345267, guid: 78b30cd88532b77479b34052a490bea7, type: 3}
       propertyPath: m_LocalPosition.x
