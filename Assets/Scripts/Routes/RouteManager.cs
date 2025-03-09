@@ -77,8 +77,11 @@ public class RouteManager : MonoBehaviour
 
         if (!StormManager.Instance.isStorm)
         {
-            UiManager.Instance.UpdateWeatherUI(false, 0);
-            Debug.Log("Storm Ended");
+            UiManager.Instance.UpdateWeatherUI(false, Mathf.RoundToInt(StormManager.Instance.leftOfStorm));
+        }
+        else
+        {
+            UiManager.Instance.UpdateWeatherUI(true, Mathf.RoundToInt(StormManager.Instance.leftOfStorm));
         }
 
         if (currentPoint.IsAStop)

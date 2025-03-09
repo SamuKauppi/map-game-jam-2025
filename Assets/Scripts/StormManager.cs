@@ -14,7 +14,7 @@ public class StormManager : MonoBehaviour
     private int stormChance = 20;
     private float stormStart;
     private float timeFromStart;
-
+    public float leftOfStorm = 0;
 
     private void Awake()
     {
@@ -41,6 +41,7 @@ public class StormManager : MonoBehaviour
     private void StartStorm()
     {
         isStorm = true;
+        leftOfStorm = stormDuration;
         stormStart = PlayerStats.Instance.GameTime;
         UiManager.Instance.UpdateWeatherUI(true, stormDuration);
         Debug.Log("Storm started");
@@ -49,7 +50,7 @@ public class StormManager : MonoBehaviour
     private void ContinueStorm()
     {
         timeFromStart = stormStart - PlayerStats.Instance.GameTime;
-        float leftOfStorm = stormStart - timeFromStart;
+        leftOfStorm = stormStart - timeFromStart;
         UiManager.Instance.UpdateWeatherUI(true, Mathf.RoundToInt(leftOfStorm));
         Debug.Log("Storm has been raging on for: " + timeFromStart + " hours.");
         if ((timeFromStart) > stormDuration )
