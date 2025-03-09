@@ -77,10 +77,10 @@ public class UiManager : MonoBehaviour
         StartCoroutine(ReduceOverTime(timeText, this.time, time, " h"));
         this.time = time;
     }
-    public void UpdateWeatherUI(bool weather)
+    public void UpdateWeatherUI(bool weather, int duration)
     {
         if (weather)
-            weatherText.text = "Storm";
+            weatherText.text = "Storm " + duration + "h";
         else
             weatherText.text = "Clear";
     }

@@ -22,6 +22,7 @@ public class PlayerStats : MonoBehaviour
     private int maxHealth;
     private int maxStamina;
 
+
     public int Health => health;
     public float GameTime => time;
     public int HorseStamina => horseStamina;
@@ -44,7 +45,7 @@ public class PlayerStats : MonoBehaviour
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         UiManager.Instance.UpdateMoneyUI(money);
         UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
-        UiManager.Instance.UpdateWeatherUI(weather);
+        UiManager.Instance.UpdateWeatherUI(weather, 0);
         maxHealth = health;
         maxStamina = horseStamina;
     }
@@ -98,11 +99,15 @@ public class PlayerStats : MonoBehaviour
     public void DoDamage(int damage, Event deathEvent)
     {
         health -= damage;
-        UiManager.Instance.UpdateHealthUI(health);
-        Debug.Log("Health lost: " + damage);
 
         if (health >= maxHealth)
             health = maxHealth;
+
+        StatGainVisual.Instance.StartStatChangeAnimation(damage, StatType.Health.ToString());
+        UiManager.Instance.UpdateHealthUI(health);
+        Debug.Log("Health lost: " + damage);
+
+        
 
         if (health <= 0)
         {
@@ -118,6 +123,7 @@ public class PlayerStats : MonoBehaviour
         else if(horseStamina >= maxStamina)
             horseStamina = maxStamina;
 
+        StatGainVisual.Instance.StartStatChangeAnimation(HorseStaminaMinus, StatType.Stamina.ToString());
         UiManager.Instance.UpdateHorseStaminaUI(horseStamina);
         Debug.Log("Stamina used: " + HorseStaminaMinus);
     }
