@@ -5447,6 +5447,31 @@ PrefabInstance:
       propertyPath: staminaDifficultyScale
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
+      propertyPath: deathByDebt.gameOverText
+      value: You ran out money
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
+      propertyPath: deathByTime.gameOverText
+      value: "Sands of time shift eternal, each grain heavy enough to crush a man.
+        Before you know, the time appointed to you has run off and with that, the
+        good grace of Bishop. When you finally return, it isn\u2019t fashionably
+        late, unless being thrown to jail with only water and dry bread is in fashion
+        lately. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
+      propertyPath: deathByDebt.gameOverSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 32a1218f5604c8c469c570fd864a87e9, type: 3}
+    - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
+      propertyPath: deathByStormEvent.gameOverText
+      value: "Thundering waves, overwhelming stench of brine, lightnings slashing
+        through sky like Sword of God. Ocean\u2019s wrath is upon you and no man
+        is safe from it\u2019s aquatic grasp. Your ship is like a bark boat in grasp
+        of rowdy children. To your horror, you see how wave, tall as castle wall
+        rises before you. It\u2019s the last thing you see before the tide drags
+        you down to your watery grave. "
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
