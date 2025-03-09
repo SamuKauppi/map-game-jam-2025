@@ -46,41 +46,23 @@ public class EventManager : MonoBehaviour
 
     private void HandleStatChange(List<StatChange> changes)
     {
-        //switch (type)
-        //{
-        //    case StatType.Health:
-        //        PlayerStats.Instance.DoDamage(amount);
-        //        break;
-        //    case StatType.Stamina:
-        //        PlayerStats.Instance.HorseTired(amount);
-        //        break;
-        //    case StatType.Money:
-        //        PlayerStats.Instance.LoseMoney(amount);
-        //        break;
-        //    case StatType.Time:
-        //        PlayerStats.Instance.TakeTime(amount);
-        //        break;
-        //    default:
-        //        break;
-        //}
-
-        foreach (StatChange change in changes)
+        StatGainVisual.Instance.StartStatChangeAnimation(amount, type.ToString());
+        switch (type)
         {
-            switch (change.type)
-            {
-                case StatType.Health:
-                    PlayerStats.Instance.DoDamage(change.amount);
-                    break;
-                case StatType.Stamina:
-                    PlayerStats.Instance.HorseTired(change.amount);
-                    break;
-                case StatType.Money:
-                    PlayerStats.Instance.LoseMoney(change.amount);
-                    break;
-                case StatType.Time:
-                    PlayerStats.Instance.TakeTime(change.amount);
-                    break;
-            }
+            case StatType.Health:
+                PlayerStats.Instance.DoDamage(amount, currentEvent);
+                break;
+            case StatType.Stamina:
+                PlayerStats.Instance.HorseTired(amount);
+                break;
+            case StatType.Money:
+                PlayerStats.Instance.LoseMoney(amount);
+                break;
+            case StatType.Time:
+                PlayerStats.Instance.TakeTime(amount);
+                break;
+            default:
+                break;
         }
     }
 
@@ -160,22 +142,6 @@ public class EventManager : MonoBehaviour
         popUpOptions.SetActive(false);
         closeOptions.SetActive(false);
         PlayerStats.Instance.IsPausedForEvent = false;
-    }
-
-    public void ShowEndGame(string loseType)
-    {
-        if (currentEvent == null) return;
-
-        popUpWindow.SetActive(true);
-        closeOptions.SetActive(false);
-        popUpOptions.SetActive(false);
-        quitScreen.SetActive(true);
-        popup_txt.text = currentEvent.gameOverText;
-
-        if (loseType == "time")
-            popup_img.sprite = gameOverSprite;
-        else
-            popup_img.sprite = gameOverSprite2;
     }
 
     public void QuitToMainMenu()

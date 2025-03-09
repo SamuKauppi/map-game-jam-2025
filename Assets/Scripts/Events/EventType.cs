@@ -1,13 +1,11 @@
 public enum EventType
 {
-    Moose,
     Bandit,
-    BoatDamage,
-    FallingTree,
-    ManAboard,
-    ChangeBoat,
+    Beast,
     RoughTerrain,
+    FallingTree,
     Inn,
-    
-
+    StowAway,
+    ManAbroad,
+    BoatChange,
 }

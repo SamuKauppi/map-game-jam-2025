@@ -5,6 +5,8 @@ public class SceneLoader : MonoBehaviour
 {
 
     public static SceneLoader Instance { get; private set; }
+    public string EndText { get; private set; }
+    public Sprite EndSprite { get; private set; }
 
     private void Awake()
     {
@@ -33,6 +35,12 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene(int index)
     {
         SceneManager.LoadScene(index);
+    }
+
+    public void UpdateDeathConditions(string text, Sprite sprite)
+    {
+        EndText = text;
+        EndSprite = sprite;
     }
 }
 

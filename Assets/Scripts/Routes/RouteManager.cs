@@ -80,7 +80,7 @@ public class RouteManager : MonoBehaviour
             EventManager.Instance.ActivateEvent(stopEvents[Random.Range(0, stopEvents.Length)]);
         }
 
-        if(PlayerStats.Instance.IsPlayerDead())
+        if (PlayerStats.Instance.IsPlayerDead())
         {
             SceneLoader.Instance.LoadScene(SceneType.Lose);
         }

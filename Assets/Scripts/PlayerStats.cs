@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
@@ -16,6 +15,9 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float staminaDifficultyScale = 5f;
     [SerializeField] private float timeDifficultyScale = 0.1f;
     [SerializeField] private float horseisTiredMultipier = 3f;
+    [SerializeField] private Event deathByStormEvent;
+    [SerializeField] private Event deathByTime;
+    [SerializeField] private Event deathByDebt;
 
     public int Health => health;
     public float GameTime => time;
@@ -88,11 +90,16 @@ public class PlayerStats : MonoBehaviour
         return health <= 0 || time <= 0;
     }
 
-    public void DoDamage(int damage)
+    public void DoDamage(int damage, Event deathEvent)
     {
         health -= damage;
         UiManager.Instance.UpdateHealthUI(health);
         Debug.Log("Health lost: " + damage);
+
+        if (health <= 0)
+        {
+            SceneLoader.Instance.UpdateDeathConditions(deathEvent.gameOverText, deathEvent.gameOverSprite);
+        }
     }
 
     public void HorseTired(int HorseStaminaMinus)
@@ -109,6 +116,10 @@ public class PlayerStats : MonoBehaviour
         money -= amount;
         UiManager.Instance.UpdateMoneyUI(money);
         Debug.Log("Lost money: " + amount);
+        if (money <= 0)
+        {
+            SceneLoader.Instance.UpdateDeathConditions(deathByDebt.gameOverText, deathByDebt.gameOverSprite);
+        }
     }
 
     public void TakeTime(float TakenTime)
@@ -116,6 +127,11 @@ public class PlayerStats : MonoBehaviour
         time -= TakenTime;
         UiManager.Instance.UpdateTimeUI(Mathf.RoundToInt(time));
         Debug.Log("Time taken: " + TakenTime);
+
+        if (time <= 0)
+        {
+            SceneLoader.Instance.UpdateDeathConditions(deathByTime.gameOverText, deathByTime.gameOverSprite);
+        }
     }
 
     public void SetPlayerPos(Vector2 newLocation)
@@ -134,8 +150,8 @@ public class PlayerStats : MonoBehaviour
         float distance = Vector2.Distance(startPos.position, endPos.position);
 
         float time = distance * RouteMultiplier(type) * timeDifficultyScale;
-        float stamina = distance * staminaDifficultyScale * RouteMultiplier(type);
-
+        float stamina = distance * RouteMultiplier(type) * staminaDifficultyScale;
+        float health = distance * StormManager.Instance.stormDamage;
 
         if (type == RouteType.Road || type == RouteType.Offroad)
         {
@@ -150,7 +166,7 @@ public class PlayerStats : MonoBehaviour
         {
             HorseTired(Mathf.RoundToInt(stamina));
             time *= StormManager.Instance.stormMultiplier;
-            DoDamage(StormManager.Instance.stormDamage);
+            DoDamage(Mathf.RoundToInt(health), deathByStormEvent);
         }
 
         TakeTime(time);

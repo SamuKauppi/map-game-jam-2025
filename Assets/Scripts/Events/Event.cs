@@ -28,6 +28,8 @@ public class Event
 
     [TextArea(3, 10)]
     public string gameOverText;
+
+    public Sprite gameOverSprite;
 }
 
 public enum StatType
