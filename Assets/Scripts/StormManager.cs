@@ -10,7 +10,7 @@ public class StormManager : MonoBehaviour
     //private int timebeforeStorm = 1;
     public bool isStorm = false;
     public float stormMultiplier = 2f;
-    public int stormDamage = 10;
+    public int stormDamage = 5;
     private int stormChance = 20;
     private float stormStart;
     private float timeFromStart;
