@@ -399,15 +399,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMaster
       objectReference: {fileID: 0}
-    - target: {fileID: 4392500660208148533, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
-      propertyPath: m_text
-      value: "After trials and tribulations, you finally hand the letter that has
-        travelled such a long way to its recipient. From their stoic gazes, it\u2019s
-        hard to say whether it will reward or damn them. It isn\u2019t your business
-        anyway. Mailman jobs is to deliver. What it is that he delivers, fortune
-        or folly, is mystery even for him. Now, for return to Turku to claim your
-        reward. "
-      objectReference: {fileID: 0}
     - target: {fileID: 5328058787308515081, guid: 3e1a2bf29a16da344a7f1cdc94bb558b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

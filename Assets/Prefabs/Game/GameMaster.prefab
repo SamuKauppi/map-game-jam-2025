@@ -395,7 +395,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708959437588799916}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -537,9 +537,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Click paths to move around.
-
-    - Never let me design UI again!'
+  m_text: "After trials and tribulations, you finally hand the letter that has travelled
+    such a long way to its recipient. From their stoic gazes, it\u2019s hard to say
+    whether it will reward or damn them. It isn\u2019t your business anyway. Mailman
+    jobs is to deliver. What it is that he delivers, fortune or folly, is mystery
+    even for him. Now, for return to Turku to claim your reward. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1500,9 +1502,9 @@ MonoBehaviour:
     even servant of Lord has his limits, so you shall deliver his word in the time
     given, else it is dry bread water for next few weeks. \r\nWith letters in your
     satchel and horse in reigns, you set out. St. Gabriel bless you, ye good Postman.
-    \r\n\nHow To Play:\n- Click the paths to move around\n- Zoom the map with the
-    mouse scroll\n- Move around the map with the left mouse button\n- Reach the red
-    dot and come back to Turku to win!"
+    \r\n\nHow To Play:\n- Click the paths to move around\n- Use mouse to move around
+    the map\n- If your horse runs out of stamina, you use more time to travel\n-
+    Reach the red dot and come back to Turku to win!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5449,7 +5451,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
       propertyPath: deathByDebt.gameOverText
-      value: You ran out money
+      value: "Without gold, there\u2019s no food, no bed, no horse. While righteousness
+        might carry one so far, it is not possible to fill belly on righteousness,
+        nor to gallop through fields. As your coin wears out, so does your dedication
+        to the mission. As the hunger gnaws at the bottom of your stomach, those
+        letters seem less and less meaningful. Surely, they would have sent somebody
+        more important if the letters themselves were of such importance? Or at least
+        given him a few more coin for his trouble. You abandon your journey, and
+        the letters go undelivered. "
       objectReference: {fileID: 0}
     - target: {fileID: 8760723707824665187, guid: 5fdda5e43b8717e4190da6af492f1f93, type: 3}
       propertyPath: deathByTime.gameOverText
