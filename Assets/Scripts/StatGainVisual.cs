@@ -73,7 +73,7 @@ public class StatGainVisual : MonoBehaviour
         activeAnimations[type]++; // Track active coroutine
         obj.rectTransform.position = middlePos.position;
 
-        yield return new WaitForSecondsRealtime(0.5f * (1 + activeAnimations.Count));
+        yield return new WaitForSecondsRealtime(1.5f * (activeAnimations.Count));
 
         float t = 0;
         float transitionTime = 1f;
