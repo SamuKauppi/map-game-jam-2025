@@ -10,7 +10,7 @@ public class StatGainVisual : MonoBehaviour
 
     [SerializeField] private RectTransform middlePos;
     [SerializeField] private RectTransform statPos;
-    [SerializeField] private TMP_Text gainText;
+    [SerializeField] private TMP_Text gainTextObject;
 
     private void Awake()
     {
@@ -25,32 +25,45 @@ public class StatGainVisual : MonoBehaviour
 
     private void Start()
     {
-        gainText.gameObject.SetActive(false);
+        gainTextObject.gameObject.SetActive(false);
     }
 
     public void StartStatChangeAnimation(int amount, string type)
     {
-        TMP_Text newGainText = Instantiate(gainText);
-        newGainText.text = "";
-        amount *= -1;
-        if(amount > 0)
-        {
-            newGainText.text = "+" + amount + type;
-        }
-        else
-        {
-            newGainText.text += amount + type;
-        }    
+        if (gainTextObject == null) return;
 
-        newGainText.gameObject.SetActive(true);
-        StartCoroutine(AnimateTextObj(newGainText));
+        gainTextObject.text = "";
+        gainTextObject.gameObject.SetActive(true);
+
+        switch (type)
+        {
+            case "Stamina":
+                gainTextObject.color = Color.green;
+                break;
+            case "Time":
+                gainTextObject.color = Color.black;
+                break;
+            case "Health":
+                gainTextObject.color = Color.red;
+                break;
+            case "Money":
+                gainTextObject.color = Color.yellow;
+                break;
+            default:
+                break;
+        }
+
+        amount *= -1;
+        gainTextObject.text = amount > 0 ? "+" + amount + " " + type : amount + " " + type;
+
+        StartCoroutine(AnimateTextObj(gainTextObject));
     }
 
     private IEnumerator AnimateTextObj(TMP_Text obj)
     {
         obj.rectTransform.position = middlePos.position;
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(2f);
 
         float t = 0;
         float transitionTime = 1f;
@@ -61,7 +74,7 @@ public class StatGainVisual : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSecondsRealtime(1f);
-        Destroy(obj.gameObject);
+        yield return new WaitForSecondsRealtime(0.5f);
+        obj.gameObject.SetActive(false);
     }
 }
